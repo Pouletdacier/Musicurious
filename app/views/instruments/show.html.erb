@@ -1,0 +1,20 @@
+<div class="instrument-show-container">
+  <div class="instrument-description">
+    <h2><%= @instruments.name %></h2>
+    <p><strong>Family:</strong> <%= @instrument.family %></p>
+    <p><strong>Tessitura:</strong> <%= @instrument.tessitura %></p>
+    <p><strong>Materials:</strong> <%= @instrument.materials %></p>
+    <p><strong>Origins:</strong> <%= @instrument.origins %></p>
+    <p><strong>More Info:</strong> <%= @instrument.more_info %></p>
+    <p><strong>Geographical Region:</strong> <%= @instrument.geographical_region %></p>
+    <p><strong>Town:</strong> <%= @instrument.town %></p>
+  </div>
+
+  <div class="instrument-info">
+    <div class="instrument-photo-container">
+      <%= image_tag @instrument.photos, class: "instrument-photo" %>
+    </div>
+  </div>
+
+  <div class="instrument-video"></div>
+</div>
