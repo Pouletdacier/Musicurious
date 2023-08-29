@@ -1,0 +1,48 @@
+.instrument-show-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px;
+
+  .instrument-description {
+    flex: 1;
+    font-size: 1.2em;
+    padding-right: 20px;
+
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+  }
+
+  .instrument-info {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    .instrument-photo-container {
+      max-width: 300px;
+
+      .instrument-photo {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .instrument-video {
+    flex: 1;
+    border-radius: 10px;
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+  }
+}
