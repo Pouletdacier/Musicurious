@@ -397,7 +397,7 @@ mbira = Instrument.create!(
 file = File.open(Rails.root.join("db/seeds/instruments/mbira.jpg"))
 mbira.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 file = File.open(Rails.root.join("db/seeds/discovery/MBIRA P.jpg"))
-Mbira.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+mbira.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 
 # Nay
