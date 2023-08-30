@@ -10,14 +10,23 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <%= link_to "Discovery", discovery_instruments_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Catalog", instruments_path, class: "nav-link" %>
+        </li>
+        <% unless controller_name == "pages" && action_name == "home" %>
+          <div class="form-outline">
+            <input type="search" id="form1" class="form-control" placeholder="Type query" aria-label="Search" />
+          </div>
+        <% end %>
         <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-          <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
-          </a>
+            <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= image_tag "https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fimg.freepik.com%2Ficones-gratuites%2Fguitare_318-419057.jpg%3Fw%3D2000", class: "avatar", alt: "dropdown menu" %>
+            </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Favorites", favorites_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>

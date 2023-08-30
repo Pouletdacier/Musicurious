@@ -18,8 +18,6 @@
 # file = File.open(Rails.root.join("db/seeds/birds/eurasian_jay_helmut.jpg"))
 # helmut.photo.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
-
-
 puts 'Burning all to ash...'
 Favorite.destroy_all
 Instrument.destroy_all
