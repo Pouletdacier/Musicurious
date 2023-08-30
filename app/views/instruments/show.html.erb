@@ -1,4 +1,15 @@
 <div class="instrument-show-container">
+  <div class="instrument-info">
+    <div class="instrument-photo-container">
+      <%= cl_image_tag @instrument.photos.first.key, crop: :lfill, resize: :lpad %>
+    </div>
+  </div>
+
+<%= link_to instrument_favorites_path(@instrument),
+  data: { turbo_method: :post } do %>
+    <i class="fa-regular fa-heart"></i>
+  <% end %>
+
   <div class="instrument-description">
     <h2><%= @instrument.name %></h2>
     <p><strong>Family:</strong> <%= @instrument.family %></p>
