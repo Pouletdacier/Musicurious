@@ -11,5 +11,5 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :favorites, :only[:index, :create]
+  resources :favorites, only: [:index, :create]
 end

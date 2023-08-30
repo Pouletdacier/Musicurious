@@ -1,0 +1,17 @@
+<div class="row">
+  <% @instruments.each do |instrument| %>
+    <div class="card" style="width: 18rem;">
+      <%= cl_image_tag instrument.picture.key, crop: :lfill, resize: :lpad %>
+
+      <div class="card-body">
+        <h4><strong><%= link_to instrument.name , instrument_path(instrument)  %></strong></h4><br>
+        <p class="card-text">
+          <em><%= instrument.family%></em> <br>
+          <%= instrument.origins  %> <br>
+          <strong><%= instrument.geographical_region  %></strong>
+        </p>
+      </div>
+    </div>
+  <%end%>
+</div>
+<%= link_to "Discovery", discovery_instruments_path %>
