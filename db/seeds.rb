@@ -53,6 +53,8 @@ dobro = Instrument.create!(
   town: 'Los Angeles'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/dobro.jpg"))
+dobro.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/DOBRO P.jpg"))
 dobro.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # Sousaphone
@@ -67,7 +69,11 @@ sousaphone = Instrument.create!(
   town: 'Washington D.C.'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/sousaphone.jpg"))
+sousaphone.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/SOUSA P.jpg"))
 sousaphone.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+
+
 
 # Pedal Steel Guitar
 pedal_steel_guitar = Instrument.create!(
@@ -81,7 +87,10 @@ pedal_steel_guitar = Instrument.create!(
   town: 'Nashville'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/pedal_steel_guitar.jpg"))
+pedal_steel_guitar.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/PEDAL STEEL P.jpg"))
 pedal_steel_guitar.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+
 
 # Cuica
 cuica = Instrument.create!(
@@ -95,6 +104,8 @@ cuica = Instrument.create!(
   town: 'Rio de Janeiro'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/cuica.jpg"))
+cuica.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/cuica.jpg"))
 cuica.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # Diple
@@ -109,7 +120,10 @@ diple = Instrument.create!(
   town: 'Split'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/diple.jpg"))
+diple.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/DIPLE P.jpg"))
 diple.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+
 
 # Chitarrone
 chitarrone = Instrument.create!(
@@ -123,6 +137,8 @@ chitarrone = Instrument.create!(
   town: 'Rome'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/chitarrone.jpg"))
+chitarrone.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/CHITARRONE P.jpg"))
 chitarrone.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # Krar
@@ -137,7 +153,10 @@ krar = Instrument.create!(
   town: 'Addis Ababa'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/krar.jpg"))
+krar.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/KRAR P.jpg"))
 krar.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+
 
 # Sékéré
 sekere = Instrument.create!(
@@ -151,7 +170,10 @@ sekere = Instrument.create!(
   town: 'Lagos'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/sekere.jpg"))
+sekere.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/SEKERE P.jpg"))
 sekere.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+
 
 # Kamanche
 kamanche = Instrument.create!(
@@ -165,6 +187,8 @@ kamanche = Instrument.create!(
   town: 'Tehran'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/kamanche.jpg"))
+kamanche.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/KAMANCHE P.jpg"))
 kamanche.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # Shofar
@@ -179,6 +203,8 @@ shofar = Instrument.create!(
   town: 'Jerusalem'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/shofar.jpg"))
+shofar.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/SHOFAR P.jpg"))
 shofar.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # Erhu
@@ -193,6 +219,8 @@ erhu = Instrument.create!(
   town: 'Beijing'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/erhu.jpg"))
+erhu.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/ERHU P.jpg"))
 erhu.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # Di (assuming you mean Dizi)
@@ -207,6 +235,8 @@ dizi = Instrument.create!(
   town: 'Shanghai'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/dizi.jpg"))
+dizi.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/DIZI P.jpg"))
 dizi.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # Tabla
@@ -221,6 +251,8 @@ tabla = Instrument.create!(
   town: 'Mumbai'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/tabla.jpg"))
+tabla.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/TABLA P.jpg"))
 tabla.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # Vina (assuming you mean Veena)
@@ -235,6 +267,8 @@ veena = Instrument.create!(
   town: 'Chennai'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/veena.png"))
+veena.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/VEENAA.jpg"))
 veena.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # Khene
@@ -249,6 +283,8 @@ khene = Instrument.create!(
   town: 'Udon Thani'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/khene.jpg"))
+khene.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/KHENE P.jpg"))
 khene.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # Didgeridoo
@@ -263,6 +299,8 @@ didgeridoo = Instrument.create!(
   town: 'Darwin'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/didgeridoo.jpg"))
+didgeridoo.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/DIDGERI P.jpg"))
 didgeridoo.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # Appalachian Zither
@@ -277,6 +315,8 @@ appalachian_zither = Instrument.create!(
   town: 'Appalachia'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/appalachian_zither.jpg"))
+appalachian_zither.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/APPALACHIAN ZITHER.jpg"))
 appalachian_zither.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # Steel Drum
@@ -291,6 +331,8 @@ steel_drum = Instrument.create!(
   town: 'Port of Spain'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/steel_drum.jpg"))
+steel_drum.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/STEEL DRUM.jpg"))
 steel_drum.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # Syrinx (Pan Flute)
@@ -305,6 +347,8 @@ syrinx = Instrument.create!(
   town: 'Athens'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/syrinx.jpg"))
+syrinx.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/SYRINX P.jpg"))
 syrinx.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # Cromorne
@@ -319,6 +363,8 @@ cromorne = Instrument.create!(
   town: 'Paris'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/cromorne.jpg"))
+cromorne.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/CROMORNE P.jpg"))
 cromorne.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # Celesta
@@ -333,6 +379,8 @@ celesta = Instrument.create!(
   town: 'Paris'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/celesta.jpg"))
+celesta.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/CELESTA P.jpg"))
 celesta.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # Mbira
@@ -347,7 +395,10 @@ mbira = Instrument.create!(
   town: 'Harare'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/mbira.jpg"))
-mbira.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+mbira.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/MBIRA P.jpg"))
+Mbira.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+
 
 # Nay
 nay = Instrument.create!(
@@ -361,6 +412,8 @@ nay = Instrument.create!(
   town: 'Cairo'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/nay.jpg"))
+nay.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/NAY P.jpg"))
 nay.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # Suona
@@ -375,6 +428,8 @@ suona = Instrument.create!(
   town: 'Qingdao'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/suona.jpg"))
+suona.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/SUONA P.jpg"))
 suona.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # Sitar
@@ -389,6 +444,8 @@ sitar = Instrument.create!(
   town: 'Mumbai'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/sitar.jpg"))
+sitar.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/SITAR P.jpg"))
 sitar.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # Slit drum
@@ -403,6 +460,8 @@ slit_drum = Instrument.create!(
   town: 'Kinshasa'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/slit_drum.jpg"))
+slit_drum.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/discovery/SLIT DRUM.jpg"))
 slit_drum.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 puts '...The circle is completed!'
