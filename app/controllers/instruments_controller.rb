@@ -6,7 +6,7 @@ class InstrumentsController < ApplicationController
   def discovery
     @instruments = Instrument.all
   end
-  
+
   def show
     @instrument = Instrument.find(params[:id])
   end
