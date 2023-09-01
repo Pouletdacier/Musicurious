@@ -1,5 +1,6 @@
-<div style="width: 100%; height: 700px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1479707406242-e8929e87e734?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80);">
+  <div class="container">
+    <h1>Instruments of the world at your fingertips</h1>
+    <%= link_to 'Explore', map_path, class: 'btn btn-flat' %>
+  </div>
 </div>
