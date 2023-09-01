@@ -1,22 +1,13 @@
 .discovery-card-wrapper{
- width: 18%;
+  width: 100%;
 }
 .discover-container {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: stretch;
-  flex-shrink: 0;
-  align-content: stretch;
-  flex-direction: column;
-  max-height: 1900px;
-  column-gap: 25px;
+  padding: 50px 20px;
+  column-count: 5;
+  gap: 15px;
 
   .discover-card {
     border-radius: 8px;
-    flex: 1;
     margin-top: 10px;
     overflow: hidden;
     position: relative;
@@ -28,14 +19,15 @@
       display: block;
       flex-shrink: 0;
     }
-    .like_icon{
+    .like-icon-container{
       position: absolute;
-      bottom: 10px;
-      right: 10px;
-      cursor: pointer;
-      transition: color 0.3s;
-      color: red;
+      top: 10px;
+      left: 10px;
     }
+    .like-icon {
+      font-size: 180%;
+    }
+
 
     .discover-info{
       font-family: Fredoka One;
@@ -52,9 +44,9 @@
       color: white;
       text-align: center;
     }
-  }
-  &:hover .discover-card .discover-info {
-    bottom: 0;
-    transition: .3s ease-in-out;
+    &:hover .discover-info {
+      bottom: 0;
+      transition: .3s ease-in-out;
+    }
   }
 }
