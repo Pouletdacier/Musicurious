@@ -1,31 +1,41 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+  <%# <%= file:///var/folders/v8/kvs17xhj7hq55nk9rczccv8c0000gn/T/TemporaryItems/NSIRD_screencaptureui_NcGQgI/Capture%20d%E2%80%99e%CC%81cran%202023-08-31%20a%CC%80%2017.43.37.png %>
+    <%= link_to root_path, class: "navbar-brand d-flex align-items-center" do %>
+      <%= image_tag "avatar.png", style: "width: 54px; height: 51px; cover no-repeat;", alt: "Logo" %>
+      <span style="display: flex; width: 166px; height: 38px; flex-direction: column; justify-content: center; color: var(--noir, #000); text-align: center; font-family: 'Fredoka One'; font-size: 24px; font-style: normal; font-weight: 400; line-height: normal; margin-left: 10px;">Musicurious</span>
     <% end %>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+
+      <ul class="navbar-nav me-auto">
+
+
+        <li class="nav-item">
+          <%= link_to "Map", map_path, class: "nav-link custom-map" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Discovery", discovery_instruments_path, class: "nav-link custom-discovery" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Catalog", instruments_path, class: "nav-link custom-catalog" %>
+        </li>
+
+      </ul>
+
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <%= link_to "Map", root_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Discovery", discovery_instruments_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Catalog", instruments_path, class: "nav-link" %>
-        </li>
+
         <% unless controller_name == "pages" && action_name == "home" %>
-          <div class="form-outline">
-            <input type="search" id="form1" class="form-control" placeholder="Type query" aria-label="Search" />
+          <div class="form-outline position-relative">
+           <i class="fas fa-search position-absolute" style="top: 50%; left: 15px; transform: translateY(-50%); color: gray;"></i>
+            <input type="search" id="form1" class="form-control" placeholder="Search for instruments" aria-label="Search" />
+            <%# <i class="fa-solid fa-circle-xmark position-absolute" style="top: 50%; right: 15px; transform: translateY(-50%); color: gray;"></i> %>
           </div>
         <% end %>
+
+
         <% if user_signed_in? %>
-          <li class="nav-item dropdown">
+          <div class="nav-item dropdown">
             <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <%= image_tag "https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fimg.freepik.com%2Ficones-gratuites%2Fguitare_318-419057.jpg%3Fw%3D2000", class: "avatar", alt: "dropdown menu" %>
             </a>
@@ -33,13 +43,21 @@
               <%= link_to "Favorites", favorites_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
-          </li>
+          </div>
         <% else %>
-          <li class="nav-item">
+          <div class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
+          </div>
         <% end %>
-      </ul>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+
+
+
     </div>
   </div>
 </div>
