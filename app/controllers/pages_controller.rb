@@ -5,7 +5,8 @@ class PagesController < ApplicationController
       {
         lat: instrument.latitude,
         lng: instrument.longitude,
-        info_window_html: render_to_string(partial: "info_window", locals: {instrument: instrument})
+        info_window_html: render_to_string(partial: "info_window", locals: {instrument: instrument}),
+        # marker_html: render_to_string(partial: "marker")
       }
     end
   end
