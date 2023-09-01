@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   get '/map', to: 'pages#map', as: 'map'
 
+  get 'serve_avatar', to: 'home#serve_avatar', as: :serve_avatar
+
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
