@@ -1,12 +1,137 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+
+  .navbar-collapse {
+    flex-grow: 0;
+  }
+
+  .navbar-brand {
+    margin-right: 20px; // Add some spacing between the brand and the nav links
+
+    img {
+      width: 40px;
+    }
+  }
+
+  .navbar-nav {
+    margin-right: auto; // This will push other content to the right
+    align-items: center;
+
+    .nav-item {
+      margin-left: 15px; // Space between the links
+
+      &.first {
+        margin-left: 0;
+      }
+    }
+  }
+  .nav-item.dropdown {
+    margin-right: 20px; // adjust this value as per your design needs
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+
+  // Styles for "Map"
+  .custom-map {
+    color: var(--noir, #000);
+    text-align: center;
+    font-family: 'Fredoka One';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    // width: 27px;
+    // height: 16px;
+  }
+
+  // Styles for "Discovery"
+  .custom-discovery {
+    color: var(--noir, #000);
+    text-align: center;
+    font-family: 'Fredoka One';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    // width: 63px;
+    // height: 16px;
+  }
+
+  // Styles for "Catalog"
+  .custom-catalog {
+    color: var(--noir, #000);
+    text-align: center;
+    font-family: 'Fredoka One';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    // width: 50px;
+    // height: 16px;
+  }
+
+  .form-outline {
+    width: 346px;
+    height: 42px;
+    margin-left: 20px;
+
+    .form-control {
+      // height: 100%;
+      border-radius: 25px; // This will provide rounded corners
+      padding-left: 40px; // To ensure there's space for the magnifying glass icon
+      padding-right: 40px; // To ensure there's space for the circle-xmark icon
+      background-color: var(--lighty-gray, #DDD);
+
+      &::placeholder {
+        color: var(--dark-grey, #888);
+        font-family: 'Fredoka One';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+
+  .form-outline {
+    position: relative; // Since icons inside will be absolutely positioned
+
+    .fa-search, .fa-times-circle {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: lightgray;
+      z-index: 5;
+    }
+
+    .fa-search {
+      left: 15px;
+    }
+
+    .fa-times-circle {
+      right: 15px;
+    }
+  }
+
+  .form-outline .form-control {
+    &::placeholder {
+      color: gray;
+    }
+ }
+
+ .avatar {
+  width: 50px;
+  border-radius: 50%;
+  margin-left: 10px;
+ }
+
+
+//  .custom-map:active,
+//     .custom-discovery:active,
+//     .custom-catalog:active {
+//         background: #430C05;
+//         color: white;
+//     }
 }
