@@ -1,48 +1,142 @@
 .instrument-show-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin: 20px;
+  gap: 20px;
+  max-width: 100vw;
 
+  .fa-heart {
+    width: 26px;
+    height: 22.235px;
+    flex-shrink: 0;
+    position: absolute;
+    right: 20px;
+    z-index: 10;
+  }
+  .instrument-info {
+    display: flex;
+    gap: 20px;
+  }
+
+  .instrument-photo {
+    height: 335px;
+    border-radius: 8px;
+    background-color: #C4B8B8;
+    object-fit: contain;
+    object-position: center;
+  }
+  .instrument-photo-2 {
+    background-color: transparent;
+    object-fit: cover;
+  }
   .instrument-description {
     flex: 1;
     font-size: 1.2em;
     padding-right: 20px;
 
-    h2 {
-      font-size: 1.5em;
-      margin-bottom: 10px;
+    .instrument-name {
+      height: 60px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      color: var(--noir, #000);
+      font-family: 'Fredoka One';
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 400;
     }
+    .instrument-attributes {
+      height: 307px;
 
-    p {
-      margin: 5px 0;
-    }
+      .instrument-attribute,
+      .instrument-attribute-long {
+        margin: 5px 0;
 
-    strong {
-      font-weight: bold;
-    }
-  }
+        strong {
+          color: var(--noir, #430C05);
+          font-family: Inter;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
 
-  .instrument-info {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+        .instrument-attribute-content,
+        .instrument-attribute-content-long {
+          font-family: 'Inter';
+          font-size: 16px;
+          font-weight: 400;
+          color: var(--noir, rgba(0, 0, 0, 0.80));
+        }
 
-    .instrument-photo-container {
-      max-width: 300px;
-
-      .instrument-photo {
-        max-width: 100%;
-        border-radius: 10px;
+        .instrument-icon {
+          display: inline-block;
+          margin-right: 8px; // Spacing between icon and text
+        }
       }
+    }
+
+    .instrument-attribute-content {
+      color: var(--noir, #430C05); // Explicitly setting the color
+      font-weight: 600;
     }
   }
 
   .instrument-video {
-    flex: 1;
-    border-radius: 10px;
-    border: 2px dashed #ccc;
-    padding: 20px;
-    text-align: center;
+    width: 937px;
+    height: 507px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
   }
+
+  iframe {
+    display: block;
+  }
+
+  .instrument-audio {
+    audio {
+      display: block;
+      width: 50%;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    // Controls bar styling
+    ::-webkit-media-controls-panel {
+      background-color: #f5f5f5;  // Light grey background
+      padding: 5px;
+    }
+
+    // Play button styling
+    ::-webkit-media-controls-play-button {
+      color: #4CAF50; // A shade of green
+    }
+
+      // Timeline styling
+  ::-webkit-media-controls-timeline {
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+    // Volume styling
+    ::-webkit-media-controls-volume-slider {
+      cursor: pointer;
+      border-radius: 8px;
+    }
+  }
+}
+.suggestions {
+  width: 649px;
+  height: 58px;
+  flex-shrink: 0;
+  color: var(--noir, #000);
+  font-family: Fredoka One;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
