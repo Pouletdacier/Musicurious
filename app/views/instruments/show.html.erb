@@ -1,25 +1,75 @@
 <div class="instrument-show-container">
   <div class="instrument-info">
-    <div class="instrument-photo-container">
-      <%= cl_image_tag @instrument.picture.key, crop: :lfill, resize: :lpad %>
-    </div>
+      <%= cl_image_tag @instrument.picture.key, crop: :lfill, resize: :lpad, class: "instrument-photo" %>
+      <%= cl_image_tag @instrument.photos.first.key, crop: :lfill, resize: :lpad, class: "instrument-photo instrument-photo-2" %>
   </div>
-
-<%= link_to instrument_favorites_path(@instrument),
-  data: { turbo_method: :post } do %>
-    <i class="fa-regular fa-heart"></i>
-  <% end %>
 
   <div class="instrument-description">
-    <h2><%= @instrument.name %></h2>
-    <p><strong>Family:</strong> <%= @instrument.family %></p>
-    <p><strong>Tessitura:</strong> <%= @instrument.tessitura %></p>
-    <p><strong>Materials:</strong> <%= @instrument.materials %></p>
-    <p><strong>Origins:</strong> <%= @instrument.origins %></p>
-    <p><strong>More Info:</strong> <%= @instrument.more_info %></p>
-    <p><strong>Geographical Region:</strong> <%= @instrument.geographical_region %></p>
-    <p><strong>Town:</strong> <%= @instrument.town %></p>
-  </div>
+    <div class="instrument-name">
+      <%= @instrument.name %>
+    </div>
 
-  <div class="instrument-video"></div>
+    <div class="instrument-attribute">
+      <%# <strong>Family:</strong> %>
+      <span class="instrument-attribute-content"><%= @instrument.family %></span>
+    </div>
+
+    <div class="instrument-attributes">
+      <div class="instrument-attribute-long">
+        <%# <strong>Origins:</strong> %>
+        <span class="instrument-attribute-content-long"><%= @instrument.origins %></span>
+      </div>
+      <div class="instrument-attribute-long">
+        <%# <strong>More Info:</strong> %>
+        <span class="instrument-attribute-content-long"><%= @instrument.more_info %></span>
+      </div>
+
+      <div class="instrument-attribute">
+        <%# <strong>Tessitura:</strong> %>
+        <span class="instrument-icon">
+          <!-- Tessitura SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <%# PATH 1 À REMETTRE %>
+            <path d="M14 2.33325C7.55654 2.33325 2.33337 7.55642 2.33337 13.9999C2.33337 20.4434 7.55654 25.6666 14 25.6666C20.4435 25.6666 25.6667 20.4434 25.6667 13.9999C25.6667 7.55642 20.4435 2.33325 14 2.33325ZM12.8334 10.2083V17.7916C12.8334 18.0237 12.7412 18.2462 12.5771 18.4103C12.413 18.5744 12.1904 18.6666 11.9584 18.6666C11.7263 18.6666 11.5038 18.5744 11.3397 18.4103C11.1756 18.2462 11.0834 18.0237 11.0834 17.7916V10.2083C11.0834 9.97619 11.1756 9.75363 11.3397 9.58953C11.5038 9.42544 11.7263 9.33325 11.9584 9.33325C12.1904 9.33325 12.413 9.42544 12.5771 9.58953C12.7412 9.75363 12.8334 9.97619 12.8334 10.2083ZM19.8334 10.2083V17.7916C19.8334 18.0237 19.7412 18.2462 19.5771 18.4103C19.413 18.5744 19.1904 18.6666 18.9584 18.6666C18.7263 18.6666 18.5038 18.5744 18.3397 18.4103C18.1756 18.2462 18.0834 18.0237 18.0834 17.7916V10.2083C18.0834 9.97619 18.1756 9.75363 18.3397 9.58953C18.5038 9.42544 18.7263 9.33325 18.9584 9.33325C19.1904 9.33325 19.413 9.42544 19.5771 9.58953C19.7412 9.75363 19.8334 9.97619 19.8334 10.2083ZM16.3334 11.9583V16.0416C16.3334 16.2737 16.2412 16.4962 16.0771 16.6603C15.913 16.8244 15.6904 16.9166 15.4584 16.9166C15.2263 16.9166 15.0038 16.8244 14.8397 16.6603C14.6756 16.4962 14.5834 16.2737 14.5834 16.0416V11.9583C14.5834 11.7262 14.6756 11.5036 14.8397 11.3395C15.0038 11.1754 15.2263 11.0833 15.4584 11.0833C15.6904 11.0833 15.913 11.1754 16.0771 11.3395C16.2412 11.5036 16.3334 11.7262 16.3334 11.9583ZM9.33337 12.5416V15.4583C9.33337 15.6903 9.24119 15.9129 9.07709 16.077C8.913 16.2411 8.69044 16.3333 8.45837 16.3333C8.22631 16.3333 8.00375 16.2411 7.83966 16.077C7.67556 15.9129 7.58337 15.6903 7.58337 15.4583V12.5416C7.58337 12.3095 7.67556 12.087 7.83966 11.9229C8.00375 11.7588 8.22631 11.6666 8.45837 11.6666C8.69044 11.6666 8.913 11.7588 9.07709 11.9229C9.24119 12.087 9.33337 12.3095 9.33337 12.5416Z" fill="black"/>
+          </svg>
+        </span>
+
+        <span class="instrument-attribute-content"><%= @instrument.tessitura %></span>
+      </div>
+
+      <div class="instrument-attribute">
+        <%# <strong>Materials:</strong> %>
+        <span class="instrument-icon">
+          <!-- Materials SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <%# PATH 2 À REMETTRE %>
+          <path d="M13.1325 11.3808L11.9086 10.1564C11.6283 9.876 11.2483 9.71799 10.8518 9.71694C10.4553 9.71588 10.0745 9.87187 9.79268 10.1508L1.28346 18.0037C0.973619 18.2958 0.770182 18.668 0.751432 19.0847C0.742411 19.2914 0.776091 19.4977 0.850371 19.6908C0.92465 19.8838 1.03793 20.0595 1.18315 20.2069L3.01128 22.0552C3.01225 22.0564 3.01335 22.0575 3.01456 22.0584C3.29706 22.34 3.67929 22.4987 4.07815 22.5H4.13346C4.55018 22.4845 4.92331 22.2891 5.21956 21.9764L13.1274 13.5061C13.2676 13.3671 13.379 13.2017 13.4552 13.0196C13.5313 12.8374 13.5708 12.642 13.5713 12.4445C13.5718 12.2471 13.5333 12.0514 13.458 11.8689C13.3827 11.6864 13.2721 11.5205 13.1325 11.3808ZM22.9688 8.90625L22.9542 8.89172L21.3478 7.30172C21.2537 7.20794 21.142 7.13372 21.0191 7.08335C20.8961 7.03299 20.7644 7.00747 20.6316 7.00828C20.4163 7.00848 20.2066 7.07637 20.0321 7.20234C20.0321 7.18219 20.0349 7.1625 20.0363 7.14516C20.0574 6.84047 20.0902 6.38016 19.7925 5.96297C19.4386 5.48597 19.0501 5.03569 18.63 4.61578C18.6289 4.61442 18.6276 4.61316 18.6263 4.61203C18.0019 3.99703 16.643 2.83875 14.5613 1.98985C13.7718 1.66583 12.9265 1.49942 12.0732 1.5C10.5938 1.5 9.46878 2.1675 9.03799 2.56313C8.79407 2.79611 8.57161 3.05057 8.37331 3.32344C8.27857 3.45421 8.22856 3.61206 8.23073 3.77352C8.2329 3.93499 8.28712 4.09144 8.38533 4.21962C8.48355 4.3478 8.62051 4.44085 8.77585 4.48495C8.93119 4.52905 9.09661 4.52183 9.24753 4.46438C9.37899 4.41523 9.51329 4.37406 9.64971 4.3411C9.93382 4.28101 10.2252 4.26285 10.5146 4.28719C11.1328 4.33828 11.8641 4.64531 12.1875 4.90078C12.736 5.34188 12.9999 5.93625 13.0435 6.82688C13.0519 7.00594 12.6816 7.67719 12.106 8.44313C11.9963 8.58767 11.9428 8.76707 11.9553 8.94807C11.9678 9.12906 12.0455 9.2994 12.1739 9.4275L13.7869 11.0405C13.9224 11.1763 14.1049 11.2551 14.2967 11.2605C14.4886 11.2659 14.6752 11.1975 14.8182 11.0695C15.2742 10.6622 15.9689 10.0481 16.2117 9.89766C16.5722 9.67594 16.83 9.63328 16.9008 9.62578C17.0845 9.60777 17.2693 9.64672 17.43 9.73734C17.4308 9.74537 17.4299 9.75347 17.4274 9.76114C17.4249 9.76881 17.4209 9.77587 17.4155 9.78188L17.3302 9.86297L17.3161 9.87609C17.2219 9.97001 17.1471 10.0816 17.0962 10.2046C17.0452 10.3275 17.0191 10.4593 17.0193 10.5924C17.0196 10.7254 17.0461 10.8571 17.0974 10.9799C17.1488 11.1027 17.2239 11.2141 17.3185 11.3077L18.9244 12.8972C19.0185 12.9909 19.1303 13.0651 19.2532 13.1153C19.3762 13.1656 19.5078 13.1911 19.6407 13.1902C19.9074 13.1906 20.1636 13.0862 20.3541 12.8995L22.9557 10.3298C22.9646 10.3209 22.9735 10.3116 22.9819 10.3022C23.1564 10.1109 23.2521 9.86059 23.2497 9.60164C23.2472 9.34269 23.1469 9.09425 22.9688 8.90625Z" fill="black"/>
+          </svg>
+        </span>
+        <span class="instrument-attribute-content"><%= @instrument.materials %></span>
+      </div>
+    </div>
+
+    <% if @instrument.audio.present? %>
+      <div class="instrument-audio">
+        <audio controls>
+          <source src="<%= @instrument.audio %>" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    <% end %>
+
+    <% if @instrument.youtube_embed_url.present? %>
+      <div class="instrument-video">
+        <iframe width="560" height="315" src="<%= @instrument.youtube_embed_url %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    <% end %>
+
+    <div class="suggestions">
+      <p>Suggested instruments</p>
+    </div>
+  </div>
+   <%= link_to instrument_favorites_path(@instrument), data: { turbo_method: :post } do %>
+    <i class="fa-regular fa-heart"></i>
+  <% end %>
 </div>
