@@ -14,9 +14,7 @@ class PagesController < ApplicationController
   def home
   end
 
-  def serve_avatar
-    file = File.open(Rails.root.join("app/assets/images/avatar.png"))
-    picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+  def quizz
+    # LE QUIZZ
   end
-
 end

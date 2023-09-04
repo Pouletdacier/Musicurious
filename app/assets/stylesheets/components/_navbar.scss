@@ -9,6 +9,7 @@
 
   .navbar-brand {
     margin-right: 20px; // Add some spacing between the brand and the nav links
+    margin-left: 10px;
 
     img {
       width: 40px;
@@ -28,7 +29,7 @@
     }
   }
   .nav-item.dropdown {
-    margin-right: 20px; // adjust this value as per your design needs
+    margin-right: 10px; // adjust this value as per your design needs
 }
 
 
@@ -72,10 +73,60 @@
     // height: 16px;
   }
 
+    // Styles pour "Quizz"
+  .custom-quizz {
+    color: var(--noir, #000);
+    text-align: center;
+    font-family: 'Fredoka One';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    // Ajustez width et height si nécessaire
+  }
+
+    // Styles pour "Login"
+  .custom-login {
+    color: var(--noir, #000);
+    text-align: center;
+    font-family: 'Fredoka One';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 10px; // Ajoutez de l'espace à droite du bouton Login
+  }
+
+  .custom-logout {
+    color: var(--noir, #000);
+    text-align: center;
+    font-family: 'Fredoka One';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.custom-logout:hover {
+  color: #000 !important; /* change the text color to the specified green */
+  background-color: $vert-button;
+}
+
+
+
+  .nav-item:last-child {
+    margin-right: 0; // Assurez-vous que le dernier élément de la navbar n'a pas de marge à droite
+  }
+
+
+
+
+
   .form-outline {
     width: 346px;
     height: 42px;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 
     .form-control {
       // height: 100%;
@@ -134,4 +185,11 @@
 //         background: #430C05;
 //         color: white;
 //     }
+
+.active-button {
+  background-color: $vert-button;
+  border-radius: 10px; // Ajustez cette valeur pour obtenir le rayon de bordure souhaité
+  color: black;
+}
+
 }

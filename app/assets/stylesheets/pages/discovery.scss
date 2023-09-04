@@ -33,7 +33,7 @@
     // }
 
     .discover-info{
-      font-family: Fredoka One;
+      font-family: Inter;
       padding-top: 10px;
       padding-bottom: 10px;
       padding-left: 10px;
@@ -41,7 +41,7 @@
       bottom: -45px;
       transition: .3s ease-in-out;
       right: 0;
-      background-color: #430C05;
+      background-color: $vert-fonce;
       width: 100%;
       text-decoration: none;
       color: white;
@@ -49,7 +49,7 @@
     }
     &:hover .discover-info {
       bottom: 0;
-      transition: .3s ease-in-out;
+      transition: .2s ease-in-out;
     }
   }
 }
