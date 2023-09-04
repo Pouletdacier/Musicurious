@@ -25,14 +25,15 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-        <% unless controller_name == "pages" && action_name == "home" %>
-          <div class="form-outline position-relative">
-           <i class="fas fa-search position-absolute" style="top: 50%; left: 15px; transform: translateY(-50%); color: gray;"></i>
-            <input type="search" id="form1" class="form-control" placeholder="Search for instruments" aria-label="Search" />
-            <%# <i class="fa-solid fa-circle-xmark position-absolute" style="top: 50%; right: 15px; transform: translateY(-50%); color: gray;"></i> %>
-          </div>
+        <% unless controller_name == "pages" && action_name == "map" %>
+          <%= form_tag instruments_path, method: :get, class: "navbar-form navbar-left", role: "search" do %>
+            <div class="form-outline position-relative">
+              <i class="fas fa-search position-absolute" style="top: 50%; left: 15px; transform: translateY(-50%); color: gray;"></i>
+              <input type="search" id="form1" name="search" class="form-control" placeholder="Search for instruments" aria-label="Search" />
+              <%# <i class="fa-solid fa-circle-xmark position-absolute" style="top: 50%; right: 15px; transform: translateY(-50%); color: gray;"></i> %>
+            </div>
+          <% end %>
         <% end %>
-
 
         <% if user_signed_in? %>
           <div class="nav-item dropdown">
