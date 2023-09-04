@@ -36,7 +36,7 @@
           current_page?(quizz_path) %>
   <%= form_tag search_instruments_path, method: :get, class: "form-outline position-relative" do %>
     <i class="fas fa-search position-absolute" style="top: 50%; left: 15px; transform: translateY(-50%); color: gray;"></i>
-    <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Search instruments", aria: { label: "Search" } %>
+    <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Search instruments (by name, family)", aria: { label: "Search" } %>
   <% end %>
 <% end %>
 
