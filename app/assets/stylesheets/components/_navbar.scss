@@ -109,7 +109,7 @@
 
 .custom-logout:hover {
   color: #000 !important; /* change the text color to the specified green */
-  background-color: #2A9D8F; /* change the background color to the specified green */
+  background-color: $vert-button;
 }
 
 
@@ -187,7 +187,7 @@
 //     }
 
 .active-button {
-  background-color: #2A9D8F;
+  background-color: $vert-button;
   border-radius: 10px; // Ajustez cette valeur pour obtenir le rayon de bordure souhaité
   color: black;
 }
