@@ -20,4 +20,8 @@ Rails.application.routes.draw do
   end
 
   resources :favorites, only: [:index]
+
+  get 'search_instruments', to: 'instruments#search', as: 'search_instruments'
+
+
 end
