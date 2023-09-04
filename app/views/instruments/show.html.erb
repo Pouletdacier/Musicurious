@@ -47,10 +47,7 @@
           </svg>
         </span>
         <span class="instrument-attribute-content"><%= @instrument.materials %></span>
-      </div>
-    </div>
-
-    <% if @instrument.audio.present? %>
+            <% if @instrument.audio.present? %>
       <div class="instrument-audio">
         <audio controls>
           <source src="<%= @instrument.audio %>" type="audio/mpeg">
@@ -58,6 +55,11 @@
         </audio>
       </div>
     <% end %>
+  <%# code à noter ici pour faire les modifications %>
+      </div>
+    </div>
+
+
 
     <% if @instrument.youtube_embed_url.present? %>
       <div class="instrument-video">

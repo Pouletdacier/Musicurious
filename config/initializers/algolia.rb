@@ -1,4 +1,4 @@
 AlgoliaSearch.configuration = {
-  application_id: '770BQNOYWF',
-  api_key: '5f076fb351cdef135fdffbbeba8d945d'
+  application_id: 'G02HOAXGYJ',
+  api_key: '54cdec703ac5e8ad4ed2b10d0e1e6da9'
 }
