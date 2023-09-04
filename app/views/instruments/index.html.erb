@@ -3,6 +3,7 @@
     <%= "Instruments of the world at your fingertips" %>
   </div>
   <div class="cards-container">
+
     <% if @instruments.empty? %>
       <p class="no-instruments-message">No instruments found for "<%= params[:query] %>".</p>
     <% else %>
@@ -13,7 +14,6 @@
             <div class="geographical-region"><%= instrument.geographical_region %></div>
             <%= link_to "About", instrument_path(instrument), class: "m-btn-primary" %>
           </div>
-
           <%# INFOS %>
           <div class="s-card-body">
             <h4><strong><%= instrument.name %></strong></h4>
