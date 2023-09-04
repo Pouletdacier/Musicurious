@@ -34,11 +34,15 @@
 <% unless (controller_name == "pages" && action_name == "home") ||
           (controller_name == "sessions" && action_name == "new") ||
           current_page?(quizz_path) %>
-    <div class="form-outline position-relative">
-        <i class="fas fa-search position-absolute" style="top: 50%; left: 15px; transform: translateY(-50%); color: gray;"></i>
-        <input type="search" id="form1" class="form-control" placeholder="Search instruments" aria-label="Search" />
-    </div>
+  <%= form_tag search_instruments_path, method: :get, class: "form-outline position-relative" do %>
+    <i class="fas fa-search position-absolute" style="top: 50%; left: 15px; transform: translateY(-50%); color: gray;"></i>
+    <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Search instruments", aria: { label: "Search" } %>
+  <% end %>
 <% end %>
+
+
+
+
 
 
 

@@ -83,3 +83,5 @@ gem "cloudinary"
 
 gem "geocoder"
 
+
+gem 'algoliasearch-rails'
