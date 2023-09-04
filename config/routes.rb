@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   get '/map', to: 'pages#map', as: 'map'
+  get '/quizz', to: 'pages#quizz', as: 'quizz'
 
   get 'serve_avatar', to: 'home#serve_avatar', as: :serve_avatar
 
