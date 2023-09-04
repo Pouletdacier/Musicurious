@@ -21,7 +21,7 @@
   border-radius: 8px;
   border: none;
   overflow: hidden;
-  background-color: #C4B8B8;
+  background-color: $vert-clair;
 
   .s-card-image {
     position: relative;
@@ -31,8 +31,17 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #C4B8B8;
+    background-color: $vert-clair;
     padding: 10px 0 0 10px;
+
+    .like-icon-container{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    .like-icon {
+      font-size: 180%;
+    }
 
     .m-btn-primary {
       position: absolute;
@@ -48,7 +57,7 @@
   }
 
   .geographical-region {
-    background-color: #430C05;
+    background-color: $vert-fonce;
     border-radius: 4px;
     padding: 5px 10px;
     font-size: 10px;
@@ -66,7 +75,9 @@
     background-color: white;
     position: relative;
     font-family: Fredoka One;
-    color: #430C05;
+
+    // CHANGER COULEUR ?????
+    color: $vert-fon-fonce;
   }
   .s-card-text{
     color: black

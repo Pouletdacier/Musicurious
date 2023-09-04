@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   get '/map', to: 'pages#map', as: 'map'
+  get '/quizz', to: 'pages#quizz', as: 'quizz'
 
   get 'serve_avatar', to: 'home#serve_avatar', as: :serve_avatar
 
@@ -19,4 +20,8 @@ Rails.application.routes.draw do
   end
 
   resources :favorites, only: [:index]
+
+  get 'search_instruments', to: 'instruments#search', as: 'search_instruments'
+
+
 end
