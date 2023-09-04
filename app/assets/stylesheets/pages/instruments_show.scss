@@ -21,6 +21,7 @@
 
   .instrument-photo {
     height: 335px;
+    min-width: 300px;
     max-width: 500px;
     border-radius: 8px;
     background-color: $vert-clair;
@@ -30,6 +31,7 @@
   .instrument-photo-2 {
     background-color: transparent;
     object-fit: cover;
+    max-width: 400px;
   }
   .instrument-description {
     flex: 1;
@@ -93,8 +95,7 @@
     border-radius: 8px;
     align-items: center;
     justify-content: center;
-    margin-left: -400px;
-
+    margin-left: -700px;
   }
 
   iframe {
