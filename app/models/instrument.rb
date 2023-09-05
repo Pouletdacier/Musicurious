@@ -8,4 +8,14 @@ class Instrument < ApplicationRecord
 
   geocoded_by :town
   after_validation :geocode, if: :will_save_change_to_town?
+
+  include AlgoliaSearch
+
+  algoliasearch do
+    # liste des attributs que vous souhaitez indexer
+    attributes :name, :family
+
+    # (Optionnel) configurations supplémentaires si besoin
+    searchableAttributes ['name', 'family']
+  end
 end

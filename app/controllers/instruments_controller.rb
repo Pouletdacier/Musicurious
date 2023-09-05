@@ -14,4 +14,10 @@ class InstrumentsController < ApplicationController
   def show
     @instrument = Instrument.find(params[:id])
   end
+
+  def search
+    @instruments = Instrument.search(params[:query])
+    render 'index' # ou la vue que vous souhaitez montrer
+  end
+
 end
