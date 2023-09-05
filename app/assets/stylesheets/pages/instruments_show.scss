@@ -1,11 +1,14 @@
 .instrument-show-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 3fr 2fr;
   margin: 20px;
-  gap: 20px;
+  gap: 50px;
   max-width: 100vw;
   overflow-x: hidden;
 
+  .left-side-inst {
+    height: calc(100vh - 117px);
+  }
   .fa-heart {
     width: 26px;
     height: 22.235px;
@@ -15,14 +18,14 @@
     z-index: 10;
   }
   .instrument-info {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 
   .instrument-photo {
     height: 335px;
-    min-width: 300px;
-    max-width: 500px;
+    width: 100%;
     border-radius: 8px;
     background-color: $vert-clair;
     object-fit: contain;
@@ -31,7 +34,6 @@
   .instrument-photo-2 {
     background-color: transparent;
     object-fit: cover;
-    max-width: 400px;
   }
   .instrument-description {
     flex: 1;
@@ -89,24 +91,25 @@
   }
 
   .instrument-video {
-    width: 937px;
-    height: 507px;
-    flex-shrink: 0;
+    width: 100%;
+    height: auto;
     border-radius: 8px;
-    align-items: center;
-    justify-content: center;
-    margin-left: -700px;
+    overflow: hidden;
+    margin-top: 110px;
+
+    iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      height: auto;
+    }
   }
 
-  iframe {
-    display: block;
-  }
 
   .instrument-audio {
     audio {
       display: block;
       width: 50%;
-      margin: 20px 0;
+      margin: 30px 0;
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
@@ -135,14 +138,23 @@
     }
   }
 }
-.suggestions {
-  width: 649px;
-  height: 58px;
-  flex-shrink: 0;
-  color: var(--noir, #000);
-  font-family: Fredoka One;
-  font-size: 40px;
+
+.s-card-suggest-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 8px;
+}
+.s-card-reco {
+  width: 100%;
+  margin: 0;
+}
+.suggestions_title{
+  font-family: 'Fredoka One';
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.m-btn-primary-reco{
+
 }

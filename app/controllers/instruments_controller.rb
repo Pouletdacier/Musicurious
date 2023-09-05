@@ -11,8 +11,10 @@ class InstrumentsController < ApplicationController
     @instruments = Instrument.all
   end
 
+
   def show
     @instrument = Instrument.find(params[:id])
+    @random_instruments = Instrument.order('RANDOM()').limit(2)
   end
 
   def search
