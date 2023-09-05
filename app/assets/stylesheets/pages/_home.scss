@@ -12,7 +12,7 @@
 .banner h1 {
   margin: 0;
   margin-bottom: 30px;
-  color: var(--noir, #000); // using the color variable, defaulting to black
+  color: var(--noir, #fff); // using the color variable, defaulting to black
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 
   // These are your specifications for h1
