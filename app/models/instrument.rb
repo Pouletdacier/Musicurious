@@ -1,5 +1,7 @@
 class Instrument < ApplicationRecord
   has_many :favorites, dependent: :destroy
+  has_many :questions, dependent: :destroy
+  has_many :answers
 
   has_many_attached :photos
   has_one_attached :picture

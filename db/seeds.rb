@@ -534,8 +534,6 @@ balalaika.picture.attach(io: file, filename: "photo.jpg", content_type: "image/j
 file = File.open(Rails.root.join("db/seeds/discovery/BALALAIKA P.jpg"))
 balalaika.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
-
-# --- Angklung ---
 angklung = Instrument.create!(
   name: 'Angklung',
   family: 'Percussion',
@@ -1136,6 +1134,11 @@ autoharpe.picture.attach(io: file, filename: "photo.jpg", content_type: "image/j
 file = File.open(Rails.root.join("db/seeds/discovery/AUTOHARPE P.jpg"))
 autoharpe.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
-
+puts 'Adding questions and answers...'
+question1= Question.create!(prompt: 'Which one of these is the Dobro?', instrument_id: dobro.id)
+question2= Question.create!(prompt: 'Which one of these is the Sitar?', instrument_id: sitar.id)
+question3= Question.create!(prompt: 'Which one of these is the Suona?', instrument_id: suona.id)
+question4= Question.create!(prompt: 'Which one of these is the Nay?', instrument_id: nay.id)
+question5= Question.create!(prompt: 'Which one of these is the Balalaika?', instrument_id: balalaika.id)
 
 puts '...The circle is completed!'

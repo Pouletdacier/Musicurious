@@ -1,1 +1,22 @@
 <p><strong> Slayy bitch 💅</strong></p>
+<h1>Instrument Quiz</h1>
+
+<%@questions.each do |question| %>
+  <div class='container'>
+    <div>
+      <%= question.prompt %> <br>
+    </div>
+    <% good_answer = question.instrument_id %>
+    <% random_answers = Instrument.where.not(id: good_answer).order("RANDOM()").limit(3) %>
+    <% answers = random_answers.pluck(:id) %>
+    <% answers << good_answer %>
+    <div data-controller="quiz" >
+      <% answers.shuffle.each do |answer| %>
+        <div class="answer-choice" data-action="click->quiz#answer" data-target="quiz.answer" data-is-correct="<%= answer == good_answer %>">
+          <% instrument = Instrument.find(answer) %>
+          <%= cl_image_tag instrument.picture.key, :transformation => { :width => 300, :crop => "pad" } %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>

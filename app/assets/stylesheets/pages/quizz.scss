@@ -1,0 +1,9 @@
+/* Add a green halo for correct answers */
+.correct-answer {
+  border: 2px solid green;
+}
+
+/* Add a red halo for incorrect answers */
+.incorrect-answer {
+  border: 2px solid red;
+}

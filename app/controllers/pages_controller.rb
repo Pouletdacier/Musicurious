@@ -13,8 +13,8 @@ class PagesController < ApplicationController
 
   def home
   end
-
+  
   def quizz
-    # LE QUIZZ
+    @questions = Question.all
   end
 end
