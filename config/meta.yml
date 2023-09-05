@@ -1,6 +1,6 @@
 # config/meta.yml
 meta_product_name : "Musicurious"
 meta_title : "Musicurious - Instruments of the world at your fingertips"
-meta_description : "musicurious offers you the chance to expand your musical knowledge with a wide range of instruments that are still little known to the general public."
+meta_description : "Musicurious offers you the chance to expand your musical knowledge with a wide range of instruments that are still little known to the general public."
 meta_image: "cover.png" # should exist in `app/assets/images/`
 twitter_account: "@product_twitter_account" # required for Twitter Cards
