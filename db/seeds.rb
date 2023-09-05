@@ -1,24 +1,8 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
-
-# helmut = Bird.create!(
-#   birdlord: laurie,
-#   name: 'Helmut',
-#   details: 'Judges you but won\'t tell you',
-#   species: 'Eurasian Jay',
-#   price_per_day: 150,
-#   diet: 'Omnivore',
-#   height_and_weight: "Around 35 cm, 90 g",
-#   favorite_snack: 'Acorns and insects'
-# )
-# file = File.open(Rails.root.join("db/seeds/birds/eurasian_jay_helmut.jpg"))
-# helmut.photo.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 puts 'Burning all to ash...'
+Question.destroy_all
 Favorite.destroy_all
 Instrument.destroy_all
 User.destroy_all
