@@ -33,7 +33,7 @@ dobro = Instrument.create!(
   materials: 'Wood, metal resonator',
   origins: 'The Dobro is a brand of resonator guitar, invented in the USA by the Dopyera brothers.',
   more_info: 'Distinctive for its metal resonator, which gives it a louder volume.',
-  geographical_region: 'USA',
+  geographical_region: 'North America',
   town: 'Los Angeles',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Guitare_dobro.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/J46sRuj99Cw'
@@ -51,7 +51,7 @@ sousaphone = Instrument.create!(
   materials: 'Brass or fiberglass',
   origins: 'Designed for marching, it was created by John Philip Sousa.',
   more_info: 'Circular shape allows it to be worn over the player’s shoulder.',
-  geographical_region: 'USA',
+  geographical_region: 'North America',
   town: 'Washington D.C.',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Sousaphone.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/gFrCyU_1zw0'
@@ -64,13 +64,13 @@ sousaphone.photos.attach(io: file, filename: "photo.jpg", content_type: "image/j
 
 # Pedal Steel Guitar
 pedal_steel_guitar = Instrument.create!(
-  name: 'Pedal Steel Guitar 🇲🇽',
+  name: 'Pedal Steel Guitar',
   family: 'Stringed',
   tessitura: '6 octaves',
   materials: 'Metal, wood, iron',
   origins: 'The pedal steel guitar has no body, but two ten-string necks mounted on a console. Notes and chords are produced by sliding a metal bar over the plucked strings. Developed in the 1940s, it has become a classic instrument of Hawaiian and country music.',
   more_info: 'The pedal steel guitar, originally from Mexico, was introduced to Hawaii around 1830. Joseph Kekuku, an early Hawaiian performer, was the first to slide an object along the strings.',
-  geographical_region: 'Mexico',
+  geographical_region: 'North America',
   town: 'Mexico',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Guitare_pedalsteel.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/2rwfqsjimRM'
@@ -89,7 +89,7 @@ cuica = Instrument.create!(
   materials: 'Wood, animal skin',
   origins: 'An Afro-Brazilian friction drum with a large pitch range.',
   more_info: 'Used extensively in samba music.',
-  geographical_region: 'Brazil',
+  geographical_region: 'South America',
   town: 'Rio de Janeiro',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Cuica.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/mmlK94QvwiA'
@@ -107,7 +107,7 @@ diple = Instrument.create!(
   materials: 'Wood',
   origins: 'A traditional double-chambered woodwind instrument from the Balkans.',
   more_info: 'Often used in the folk music of Dalmatia and Herzegovina.',
-  geographical_region: 'Croatia',
+  geographical_region: 'Europe',
   town: 'Split',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Diple.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/SquIKsZ64h4'
@@ -126,7 +126,7 @@ chitarrone = Instrument.create!(
   materials: 'Wood',
   origins: 'An extended lute used in Italy during the Renaissance and Baroque periods.',
   more_info: 'Known for its very long neck and deep, rich sound.',
-  geographical_region: 'Italy',
+  geographical_region: 'Europe',
   town: 'Rome',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Chitarrone.mp3',
   youtube_embed_url:'https://www.youtube.com/embed/fZYzuIGDYGs'
@@ -144,7 +144,7 @@ krar = Instrument.create!(
   materials: 'Wood, animal skin',
   origins: 'A traditional Ethiopian and Eritrean stringed instrument.',
   more_info: 'Often accompanied with a vocalist in traditional music.',
-  geographical_region: 'Ethiopia',
+  geographical_region: 'Africa',
   town: 'Addis Ababa',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Krar.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/2487oIFIeLM'
@@ -157,13 +157,13 @@ krar.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # Sékéré
 sekere = Instrument.create!(
-  name: 'Sékéré',
+  name: 'Sekere',
   family: 'Percussion',
   tessitura: 'Varies',
   materials: 'Gourd, beads or cowries',
   origins: 'A percussion instrument from Nigeria, made of a gourd with a net of beads or cowries.',
   more_info: 'Played by shaking and/or hitting the beads against the gourd.',
-  geographical_region: 'Nigeria',
+  geographical_region: 'Africa',
   town: 'Lagos',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Sekere.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/mmJm91UPGfs'
@@ -182,7 +182,7 @@ kamanche = Instrument.create!(
   materials: 'Wood with a skin membrane',
   origins: 'Traditional spiked fiddle of Persia (Iran)',
   more_info: 'Played with a bow, producing a melancholic sound.',
-  geographical_region: 'Iran',
+  geographical_region: 'Middle East',
   town: 'Tehran',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Kamanche.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/vxmJCk9J5fE'
@@ -200,7 +200,7 @@ shofar = Instrument.create!(
   materials: 'Ram’s horn',
   origins: 'Ancient Jewish musical horn.',
   more_info: 'Used for religious purposes, especially the Jewish High Holidays.',
-  geographical_region: 'Israel',
+  geographical_region: 'Middle East',
   town: 'Jerusalem',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Shofar.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/Rnkb7M3dKTg'
@@ -218,7 +218,7 @@ erhu = Instrument.create!(
   materials: 'Wood and snake skin',
   origins: 'Traditional two-stringed fiddle from China.',
   more_info: 'Known for its mournful and expressive sound.',
-  geographical_region: 'China',
+  geographical_region: 'Central and East Asia',
   town: 'Beijing',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Erhu.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/lSCHU3kwrm8'
@@ -236,7 +236,7 @@ dizi = Instrument.create!(
   materials: 'Bamboo',
   origins: 'Traditional Chinese transverse flute.',
   more_info: 'Features a membrane covering one of the holes to produce a buzzing sound.',
-  geographical_region: 'China',
+  geographical_region: 'Central and East Asia',
   town: 'Shanghai',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Di.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/lI1L2l6vi-4'
@@ -254,7 +254,7 @@ tabla = Instrument.create!(
   materials: 'Wood and animal skin',
   origins: 'Traditional Indian percussion instrument.',
   more_info: 'Consists of a pair of drums, played with fingers and palms.',
-  geographical_region: 'India',
+  geographical_region: 'South Asia',
   town: 'Mumbai',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Tabla.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/LAwgD_YxRgM'
@@ -272,7 +272,7 @@ veena = Instrument.create!(
   materials: 'Wood',
   origins: 'Ancient musical instrument of India.',
   more_info: 'Has a long neck with a rounded resonator at the end.',
-  geographical_region: 'India',
+  geographical_region: 'South Asia',
   town: 'Chennai',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Vina.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/Tz-Xmh9mXow'
@@ -290,7 +290,7 @@ khene = Instrument.create!(
   materials: 'Made of bamboo',
   origins: 'The Khene is a large mouth organ from Southeast Asia. It belongs to a family of instruments that includes the Chinese cheng and the Japanese sho. It is common in northern Thailand, Laos and Birmania.',
   more_info: 'The length of the pipes determines the pitch of the note. It can vary from 90cm to 2m20',
-  geographical_region: 'Thailand',
+  geographical_region: 'South Asia',
   town: 'Udon Thani',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Khene.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/DIfi9wDDpUQ'
@@ -308,7 +308,7 @@ didgeridoo = Instrument.create!(
   materials: 'Eucalyptus wood, traditionally hollowed out by termites',
   origins: 'Traditional wind instrument developed by Indigenous Australians.',
   more_info: 'Played by using circular breathing, which allows for a continuous sound. Known for its droning sound.',
-  geographical_region: 'Australia',
+  geographical_region: 'Oceania',
   town: 'Darwin',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Didjeridu.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/yG9ZX1FS20A'
@@ -326,10 +326,10 @@ appalachian_zither = Instrument.create!(
   materials: 'Usually made of wood',
   origins: 'The Appalachian Zither comes from the Appalachian region of the United States.',
   more_info: 'Also known as the mountain dulcimer or lap dulcimer.',
-  geographical_region: 'USA',
+  geographical_region: 'North America',
   town: 'Appalachia',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Cithare_appalaches.mp3',
-  youtube_embed_url: 'https://www.youtube.com/embed/rZWZ7KpB5Zg'
+  youtube_embed_url: 'https://www.youtube.com/embed/_6OJ1TKMENo'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/appalachian_zither.jpg"))
 appalachian_zither.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
@@ -344,10 +344,10 @@ steel_drum = Instrument.create!(
   materials: 'Made of steel',
   origins: 'Originated in Trinidad and Tobago.',
   more_info: 'Also known as the steelpan or pan. It evolved from earlier drum-based instruments.',
-  geographical_region: 'Trinidad and tobago',
+  geographical_region: 'South America',
   town: 'Port of Spain',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Steeldrum.mp3',
-  youtube_embed_url: 'https://www.youtube.com/embed/GaNjXwElAUE'
+  youtube_embed_url: 'https://www.youtube.com/embed/DRfb-AnDo7g'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/steel_drum.jpg"))
 steel_drum.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
@@ -362,7 +362,7 @@ syrinx = Instrument.create!(
   materials: 'Made of bamboo or reeds',
   origins: 'Historically used in many cultures, particularly in ancient Greece.',
   more_info: 'Also known as the Pan flute.',
-  geographical_region: 'Greece',
+  geographical_region: 'Europe',
   town: 'Athens',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Flute_pan.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/R3C3aNSOHXk'
@@ -380,7 +380,7 @@ cromorne = Instrument.create!(
   materials: 'Made of wood',
   origins: 'Medieval Europe, precursor to the modern oboe.',
   more_info: 'A double reed instrument.',
-  geographical_region: 'France',
+  geographical_region: 'Europe',
   town: 'Paris',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Cromorne.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/8w7KJznei7I'
@@ -398,7 +398,7 @@ celesta = Instrument.create!(
   materials: 'Metal plates with a wooden resonator',
   origins: 'Invented in France in the late 19th century.',
   more_info: 'The celesta has a sound that is similar to a glockenspiel but with a much softer and more subtle timbre.',
-  geographical_region: 'France',
+  geographical_region: 'Europe',
   town: 'Rouen',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Celesta.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/YSP_HorKQMc'
@@ -416,7 +416,7 @@ mbira = Instrument.create!(
   materials: 'Metal tines mounted on a wooden platform',
   origins: 'Traditional instrument of the Shona people of Zimbabwe.',
   more_info: 'Also known as a thumb piano.',
-  geographical_region: 'Zimbabwe',
+  geographical_region: 'Africa',
   town: 'Harare',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Mbira.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/kd7KC3PaEaA'
@@ -435,7 +435,7 @@ nay = Instrument.create!(
   materials: 'Made of reed',
   origins: 'Ancient Middle Eastern instrument, commonly associated with Sufi music.',
   more_info: 'End-blown flute, played without a mouthpiece.',
-  geographical_region: 'Egypt',
+  geographical_region: 'Middle East',
   town: 'Cairo',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Nay.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/5wc6zFXJPqM'
@@ -453,10 +453,10 @@ suona = Instrument.create!(
   materials: 'Made of wood with a metal bell',
   origins: 'Traditional Chinese instrument.',
   more_info: 'A double-reed instrument with a distinctively loud and high-pitched sound.',
-  geographical_region: 'China',
+  geographical_region: 'Central and East Asia',
   town: 'Qingdao',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Suona.mp3',
-  youtube_embed_url: 'https://www.youtube.com/embed/EWHW672PwY'
+  youtube_embed_url: 'https://www.youtube.com/embed/enrVDuhVlWU'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/suona.jpg"))
 suona.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
@@ -471,10 +471,10 @@ sitar = Instrument.create!(
   materials: 'Made of wood with a gourd resonator',
   origins: 'Originated from ancient India.',
   more_info: 'Used extensively in Hindustani classical music.',
-  geographical_region: 'India',
-  town: 'Mumbai',
+  geographical_region: 'South Asia',
+  town: 'Jaipur',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Sitar.mp3',
-  youtube_embed_url: 'https://www.youtube.com/embed/wLAXfkK-DPg'
+  youtube_embed_url: 'https://www.youtube.com/embed/8CnhcGpmH9Y'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/sitar.jpg"))
 sitar.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
@@ -489,7 +489,7 @@ slit_drum = Instrument.create!(
   materials: 'Carved from a single log',
   origins: 'Common in various cultures around the world, particularly in Africa and the Pacific.',
   more_info: 'Also known as a slit drum or log drum.',
-  geographical_region: 'Congo',
+  geographical_region: 'Africa',
   town: 'Kinshasa',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Tambour_bois_fente.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/0760zaJdrD0'
@@ -507,7 +507,7 @@ balalaika = Instrument.create!(
   materials: 'Wood, with a triangular body shape',
   origins: 'The balalaika is a traditional Russian stringed instrument, dating back to the 17th century.',
   more_info: 'Characterized by its distinctive triangular body and three strings, often played with the fingers without the use of a pick.',
-  geographical_region: 'Russia',
+  geographical_region: 'Europe',
   town: 'Krasnoïarsk',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Balalaika.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/UAfuMol1e-0'
@@ -525,7 +525,7 @@ angklung = Instrument.create!(
   materials: 'Bamboo tubes suspended within a bamboo frame',
   origins: 'Traditionally from the Sundanese people of West Java and Banten provinces in Indonesia.',
   more_info: 'The Angklung produces sound when shaken. Each Angklung only produces one note.',
-  geographical_region: 'Indonesia',
+  geographical_region: 'South Asia',
   town: 'Bandung',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Angklung.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/BEsxbMH88s4'
@@ -543,10 +543,10 @@ atumpan = Instrument.create!(
   materials: 'Wood with stretched animal skin',
   origins: 'Traditional drum from the Akan people of Ghana.',
   more_info: 'The Atumpan is often referred to as the "talking drum" because of its ability to mimic the intonation of spoken language.',
-  geographical_region: 'Ghana',
+  geographical_region: 'Africa',
   town: 'Kumasi',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Atumpan.mp3',
-  youtube_embed_url: 'https://www.youtube.com/embedJT3tIJzAkcc'
+  youtube_embed_url: 'https://www.youtube.com/embed/ZxYwFOwUTl0'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/atumpan.jpg"))
 atumpan.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
@@ -563,7 +563,7 @@ algaita = Instrument.create!(
   materials: 'Wood with a double reed',
   origins: 'Commonly used in the Hausa regions of Northern Nigeria and Niger.',
   more_info: 'A loud outdoor instrument, often accompanied by drumming.',
-  geographical_region: 'Nigeria',
+  geographical_region: 'Africa',
   town: 'Kano',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Algaita.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/JB44JHu55Zs'
@@ -583,10 +583,10 @@ key_accordion = Instrument.create!(
   materials: 'Wood, metal, and plastic',
   origins: 'Originated in Europe in the early 19th century.',
   more_info: 'A keyboard accordion with piano-style keys. Widely used in many forms of Western music.',
-  geographical_region: 'France',
+  geographical_region: 'Europe',
   town: 'Versaille',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Accordeon_touche.mp3',
-  youtube_embed_url: 'https://www.youtube.com/embed/3cGLbtiAbKI'
+  youtube_embed_url: 'https://www.youtube.com/embed/9yY1aqaGyZM'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/accordeon_touches.jpg"))
 key_accordion.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
@@ -601,7 +601,7 @@ accordeon_boutons = Instrument.create!(
   materials: 'Wood, metal, and plastic',
   origins: 'Evolved in Europe and is popular in traditional music of various countries.',
   more_info: 'Uses button-style keys and produces different pitches depending on whether the bellows are compressed or expanded.',
-  geographical_region: 'France',
+  geographical_region: 'Europe',
   town: 'Marseille',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Accordeon_bouton.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/6J-otnwNv6M'
@@ -621,7 +621,7 @@ bala = Instrument.create!(
   materials: 'Wooden keys with gourd resonators',
   origins: 'Traditionally from the Mandinka people of West Africa.',
   more_info: 'Also known as the balafon. Similar to a xylophone but with a distinct African character.',
-  geographical_region: 'Mali',
+  geographical_region: 'Africa',
   town: 'Bamako',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Bala.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/kXXhp_bZvck'
@@ -641,10 +641,10 @@ banjo = Instrument.create!(
   materials: 'Wood with a circular drum-like body',
   origins: 'Developed in the United States from African and European instruments.',
   more_info: 'Characterized by its twangy sound, it is often associated with country, folk, and bluegrass music.',
-  geographical_region: 'United States',
+  geographical_region: 'North America',
   town: 'Nashville',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Banjo.mp3',
-  youtube_embed_url: 'https://www.youtube.com/embed/e4Ao-iNPPUc'
+  youtube_embed_url: 'https://www.youtube.com/embed/qcDylz37bnY'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/banjo.jpg"))
 banjo.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
@@ -660,7 +660,7 @@ basson = Instrument.create!(
   materials: 'Usually made of maple wood',
   origins: 'Developed in the 16th century in Europe, evolving from earlier double-reeded instruments.',
   more_info: 'Characterized by its rich, dark tone, the bassoon plays a crucial role in orchestras and wind ensembles.',
-  geographical_region: 'Germany',
+  geographical_region: 'Europe',
   town: 'Berlin',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Basson.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/5XoanCFRRtE'
@@ -678,10 +678,10 @@ batterie = Instrument.create!(
   materials: 'Wood, metal, and synthetic materials',
   origins: 'Drums have ancient origins, seen in many cultures globally. Modern drum kits evolved in the U.S. during the 20th century.',
   more_info: 'A typical drum kit includes a combination of drums and cymbals played by sticks, brushes, or hands.',
-  geographical_region: 'United States',
+  geographical_region: 'North America',
   town: 'New Orleans',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Batterie.mp3',
-  youtube_embed_url: 'https://www.youtube.com/embed/2TAfvMn8_EQ'
+  youtube_embed_url: 'https://www.youtube.com/embed/45UQSmiMGaI'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/batterie.jpg"))
 batterie.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
@@ -696,7 +696,7 @@ berimbau = Instrument.create!(
   materials: 'Wooden bow with a steel string, and a gourd resonator',
   origins: 'An integral part of Brazilian Capoeira, the berimbau has African roots.',
   more_info: 'Its distinctive sound guides the rhythm and style of the Capoeira game.',
-  geographical_region: 'Brazil',
+  geographical_region: 'South America',
   town: 'Salvador',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Berimbau.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/GI6_eQy-OuI'
@@ -706,7 +706,6 @@ berimbau.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jp
 file = File.open(Rails.root.join("db/seeds/discovery/BERIMBAU P.jpg"))
 berimbau.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
-
 # --- Bloc à deux tons (Two-tone block) ---
 two_tone_block = Instrument.create!(
   name: 'Two-tone block',
@@ -715,7 +714,7 @@ two_tone_block = Instrument.create!(
   materials: 'Wood or synthetic materials',
   origins: 'Inspired by traditional wooden temple blocks used in East Asia.',
   more_info: 'Produces two different pitches and is commonly used in Afro-Cuban and Latin music.',
-  geographical_region: 'Cuba',
+  geographical_region: 'South America',
   town: 'Havana',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Bloc2tons.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/zxcNP7pHXNM'
@@ -733,10 +732,10 @@ bonang = Instrument.create!(
   materials: 'Bronze or brass pots mounted on a wooden frame',
   origins: 'Integral to the Javanese and Balinese gamelan ensemble of Indonesia.',
   more_info: 'It consists of several gongs, each producing a different note.',
-  geographical_region: 'Indonesia',
+  geographical_region: 'South Asia',
   town: 'Yogyakarta',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Bonang.mp3',
-  youtube_embed_url: 'https://www.youtube.com/embed/aKmV4DIG2RE'
+  youtube_embed_url: 'https://www.youtube.com/embed/VXXyiGoAtrA'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/bonang.jpg"))
 bonang.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
@@ -753,7 +752,7 @@ bongos = Instrument.create!(
   materials: 'Wood with animal skin heads',
   origins: 'Originated in Cuba, drawing inspiration from African hand drums.',
   more_info: 'Consists of two drums attached to each other, and is played using hands.',
-  geographical_region: 'Cuba',
+  geographical_region: 'South America',
   town: 'Santiago de Cuba',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Bongos.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/I9gzjPLh-IA'
@@ -771,8 +770,8 @@ bouzouki = Instrument.create!(
   materials: 'Wood with steel strings',
   origins: 'Introduced to Greece in the 1900s, influenced by ancient Greek and Turkish instruments.',
   more_info: 'Commonly used in Greek folk music, the bouzouki has a sharp and clear sound.',
-  geographical_region: 'Greece',
-  town: 'Athens',
+  geographical_region: 'Europe',
+  town: 'Tripoli',
   audio: 'Bouzouki.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/zx-a_17OVc4'
 )
@@ -790,10 +789,10 @@ bugle = Instrument.create!(
   materials: 'Brass or copper, with no valves or keys',
   origins: 'Originally used for signaling in the military, it has ancient roots, with early forms seen in Rome.',
   more_info: 'Produces sound through embouchure and has limited notes due to the lack of valves.',
-  geographical_region: 'United Kingdom',
+  geographical_region: 'Europe',
   town: 'London',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Bugle.mp3',
-  youtube_embed_url: 'https://www.youtube.com/embed/PZoYrcJGjuc'
+  youtube_embed_url: 'https://www.youtube.com/embed/DHODo_SlxRc'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/bugle.jpg"))
 bugle.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
@@ -808,10 +807,10 @@ cajon = Instrument.create!(
   materials: 'Primarily wood',
   origins: 'Originated in Peru, the Cajon was influenced by African slaves who made these instruments from shipping crates.',
   more_info: 'It is a box-shaped percussion instrument played by slapping the front face with hands.',
-  geographical_region: 'Peru',
+  geographical_region: 'South America',
   town: 'Lima',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/cajon.mp3',
-  youtube_embed_url: 'https://www.youtube.com/embed/OwbfyhNk1bM'
+  youtube_embed_url: 'https://www.youtube.com/embed/y6Q3l8t2XdU'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/cajon.jpg"))
 cajon.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
@@ -828,7 +827,7 @@ carillon = Instrument.create!(
   materials: 'Bronze bells',
   origins: 'Originated in Europe, carillons can be found in church towers and municipal buildings.',
   more_info: 'Played with a keyboard, the carillon has at least 23 bells producing harmonized melodies.',
-  geographical_region: 'Belgium',
+  geographical_region: 'Europe',
   town: 'Bruges',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Carillon.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/FKekHg5VaoI'
@@ -846,7 +845,7 @@ castanets = Instrument.create!(
   materials: 'Wood, sometimes plastic',
   origins: 'With ancient roots, castanets are especially known for their role in Spanish flamenco music.',
   more_info: 'They are hand-held percussion instruments producing clicking sounds when clapped together.',
-  geographical_region: 'Spain',
+  geographical_region: 'Europe',
   town: 'Seville',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Castagnettes.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/TuHHUDnFSO0'
@@ -866,7 +865,7 @@ chalumeau = Instrument.create!(
   origins: 'The chalumeau is a single-reed woodwind instrument and is considered the predecessor to the modern clarinet.',
   more_info: 'Popular during the Baroque period, its sound is mellower than that of the clarinet.',
   geographical_region: 'Europe',
-  town: 'Paris',
+  town: 'Lille',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Chalumeau.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/GQfWlgdja9Q'
 )
@@ -884,10 +883,10 @@ charango = Instrument.create!(
   materials: 'Wood and traditionally armadillo shells',
   origins: 'Originating in the Andes, the charango has 10 strings and is often used in traditional Andean music.',
   more_info: 'With its small size, it resembles a ukulele and has a unique, bright sound.',
-  geographical_region: 'Bolivia',
+  geographical_region: 'South America',
   town: 'La Paz',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Charango.mp3',
-  youtube_embed_url: 'https://www.youtube.com/embed/yPY1fd0Cjys&pp=ygUOY2hhcm5hZ28gY292ZXI%3D'
+  youtube_embed_url: 'https://www.youtube.com/embed/jbJ3b8SW8Bw'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/charango.jpg"))
 charango.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
@@ -903,7 +902,7 @@ dung_chen = Instrument.create!(
   materials: 'Brass or copper, sometimes with silver or gold decoration.',
   origins: 'Indigenous to the Tibetan region.',
   more_info: 'Long trumpet or horn used in Tibetan Buddhist ceremonies. It produces deep tones that are used to call together the community and spirits.',
-  geographical_region: 'Asia',
+  geographical_region: 'Central and East Asia',
   town: 'Lhasa',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Dungchen.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/cO9oUe0S-Lg'
@@ -917,7 +916,7 @@ dung_chen.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jp
 
 # Contrebasse (Double Bass)
 contrebasse = Instrument.create!(
-  name: 'Contrebasse',
+  name: 'Contrabass',
   family: 'String',
   tessitura: 'E1 to G4',
   materials: 'Usually carved from spruce or maple wood.',
@@ -936,7 +935,7 @@ contrebasse.photos.attach(io: file, filename: "photo.jpg", content_type: "image/
 
 # Flûte Piccolo
 flute_piccolo = Instrument.create!(
-  name: 'Flûte Piccolo',
+  name: 'Piccolo',
   family: 'Woodwind',
   tessitura: 'D5 to C8',
   materials: 'Wood, silver, or other metals.',
@@ -945,7 +944,7 @@ flute_piccolo = Instrument.create!(
   geographical_region: 'Europe',
   town: 'Milan',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Flute_piccolo.mp3',
-  youtube_embed_url: 'https://www.youtube.com/embed/y-twGDZeYs4&pp=ygUMcGljY29sbyBzb2xv'
+  youtube_embed_url: 'https://www.youtube.com/embed/y-twGDZeYs4'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/piccolo.jpg"))
 flute_piccolo.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
@@ -960,7 +959,7 @@ guimbarde = Instrument.create!(
   materials: 'Steel, bamboo, or bone.',
   origins: 'Ancient instrument found in various forms across Asia, Europe, and Oceania.',
   more_info: 'Also known as Jewish harp, mouth harp, or jaw harp, it is played by plucking a reed while altering the shape of the mouth to produce different pitches.',
-  geographical_region: 'Asia',
+  geographical_region: 'Central and East Asia',
   town: 'Ulaanbaatar',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Guimbarde.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/tXLoP9iSU5Y'
@@ -973,7 +972,7 @@ guimbarde.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jp
 
 # Guitare basse Steinberger
 guitare_basse_steinberger = Instrument.create!(
-  name: 'Guitare basse Steinberger',
+  name: 'Basse guitar Steinberger',
   family: 'String',
   tessitura: 'E1 to G3',
   materials: 'Carbon fiber or wood, depending on the model.',
@@ -998,9 +997,9 @@ guitare_acoustique = Instrument.create!(
   origins: 'Roots trace back to ancient civilizations but modern design evolved in Spain.',
   more_info: 'A string instrument played by plucking or strumming. Does not require amplification.',
   geographical_region: 'Europe',
-  town: 'Seville',
+  town: 'Madrid',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Guitare_acoust.mp3',
-  youtube_embed_url: 'https://www.youtube.com/embed/OyuL5biOQ94'
+  youtube_embed_url: 'https://www.youtube.com/embed/1opgh7ky2nU'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/guit.jpg"))
 guitare_acoustique.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
@@ -1065,13 +1064,13 @@ mandoline.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jp
 
 # Trompette (Trumpet)
 trompette = Instrument.create!(
-  name: 'Trompette',
+  name: 'Trumpet',
   family: 'Brass',
   tessitura: 'F♯3 to D6',
   materials: 'Brass.',
   origins: 'Antiquity, with the modern valved trumpet developed in the early 19th century.',
   more_info: 'A wind instrument that uses valves to change pitch. Widely used in various music genres.',
-  geographical_region: 'Worldwide',
+  geographical_region: 'Europe',
   town: 'Vienna',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Trompette.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/2nPwkb9ZyPQ'
