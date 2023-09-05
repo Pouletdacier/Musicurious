@@ -19,4 +19,9 @@ class PagesController < ApplicationController
     picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
   end
 
+
+
+  def quizz
+    @questions = Question.all
+  end
 end

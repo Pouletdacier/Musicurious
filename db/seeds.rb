@@ -534,4 +534,11 @@ balalaika.picture.attach(io: file, filename: "photo.jpg", content_type: "image/j
 file = File.open(Rails.root.join("db/seeds/discovery/BALALAIKA P.jpg"))
 balalaika.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
+puts 'Adding questions and answers...'
+question1= Question.create!(prompt: 'What instrument is pictured here?', instrument_id: dobro.id)
+question2= Question.create!(prompt: 'What instrument is pictured here?', instrument_id: sitar.id)
+question3= Question.create!(prompt: 'What instrument is pictured here?', instrument_id: suona.id)
+question4= Question.create!(prompt: 'What instrument is pictured here?', instrument_id: nay.id)
+question5= Question.create!(prompt: 'What instrument is pictured here?', instrument_id: balalaika.id)
+
 puts '...The circle is completed!'
