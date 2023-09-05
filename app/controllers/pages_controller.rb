@@ -13,8 +13,9 @@ class PagesController < ApplicationController
 
   def home
   end
-  
+
   def quizz
-    @questions = Question.all
+    # @questions = Question.all.shuffle
+    @question = Question.first
   end
 end
