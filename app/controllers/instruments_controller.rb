@@ -5,6 +5,15 @@ class InstrumentsController < ApplicationController
     else
       @instruments = Instrument.all
     end
+
+    # @instruments = Instrument.all
+    if params[:zones].present?
+      @instruments = @instruments.where(geographical_region: params[:zones])
+    end
+    if params[:families].present?
+      @instruments = @instruments.where(family: params[:families])
+    end
+
   end
 
   def discovery

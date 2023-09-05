@@ -1,9 +1,44 @@
-<div class="row cards-container">
+
+<div class="row cards-container" data-controller="filter">
   <div class="title">
     <%= "Instruments of the world at your fingertips" %>
-  </div>
-  <div class="cards-container">
 
+    <!-- Bouton Filters -->
+    <button class="filter-button" data-action="click->filter#toggleFilters">
+      <i class="fa fa-sliders"></i> Filters
+    </button>
+
+    <!-- Panneau de filtres -->
+    <%= form_with url: instruments_path, method: :get, class: "filters-panel", id: "filtersPanel" do %>
+      <div class="filter-category">
+        <h3>Geographic Zone:</h3>
+        <div class="filter-options">
+          <% ["North America", "South America", "Europe", "Africa", "Middle East", "Central Asia and East Asia", "South Asia", "Oceania"].each do |zone| %>
+            <label>
+              <input type="checkbox" name="zones[]" value="<%= zone %>" <%= 'checked' if params[:zones]&.include?(zone) %>>
+              <span><%= zone %></span>
+            </label>
+          <% end %>
+        </div>
+      </div>
+      <div class="filter-category">
+        <h3>Family Instrument:</h3>
+        <div class="filter-options">
+          <% ["String", "Percussion", "Woodwind", "Brass"].each do |family| %>
+            <label>
+              <input type="checkbox" name="families[]" value="<%= family %>" <%= 'checked' if params[:families]&.include?(family) %>>
+              <span><%= family %></span>
+            </label>
+          <% end %>
+        </div>
+
+        <!-- Bouton Submit -->
+        <button class="submit-button">Submit</button>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="cards-container">
     <% if @instruments.empty? %>
       <p class="no-instruments-message">No instruments found for "<%= params[:query] %>".</p>
     <% else %>
