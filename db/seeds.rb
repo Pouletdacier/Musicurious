@@ -456,7 +456,7 @@ suona = Instrument.create!(
   geographical_region: 'Central and East Asia',
   town: 'Qingdao',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Suona.mp3',
-  youtube_embed_url: 'https://www.youtube.com/embed/enrVDuhVlWU'
+  youtube_embed_url: 'https://www.youtube.com/embed/F-T25H17tHk'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/suona.jpg"))
 suona.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
@@ -474,7 +474,7 @@ sitar = Instrument.create!(
   geographical_region: 'South Asia',
   town: 'Jaipur',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Sitar.mp3',
-  youtube_embed_url: 'https://www.youtube.com/embed/8CnhcGpmH9Y'
+  youtube_embed_url: 'https://www.youtube.com/embed/LwBE8S8_m-4'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/sitar.jpg"))
 sitar.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
@@ -953,7 +953,7 @@ flute_piccolo.photos.attach(io: file, filename: "photo.jpg", content_type: "imag
 
 # Guimbarde
 guimbarde = Instrument.create!(
-  name: 'Guimbarde',
+  name: 'Jaw harp',
   family: 'Idiophone',
   tessitura: 'Varies based on size and design',
   materials: 'Steel, bamboo, or bone.',
@@ -972,7 +972,7 @@ guimbarde.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jp
 
 # Guitare basse Steinberger
 guitare_basse_steinberger = Instrument.create!(
-  name: 'Basse guitar Steinberger',
+  name: 'Bass guitar Steinberger',
   family: 'String',
   tessitura: 'E1 to G3',
   materials: 'Carbon fiber or wood, depending on the model.',
@@ -990,7 +990,7 @@ guitare_basse_steinberger.photos.attach(io: file, filename: "photo.jpg", content
 
 # Guitare acoustique (Acoustic Guitar)
 guitare_acoustique = Instrument.create!(
-  name: 'Guitare acoustique',
+  name: 'Acoustic guitar',
   family: 'String',
   tessitura: 'E2 to E6',
   materials: 'Various woods like spruce, cedar, and rosewood.',
@@ -999,7 +999,7 @@ guitare_acoustique = Instrument.create!(
   geographical_region: 'Europe',
   town: 'Madrid',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Guitare_acoust.mp3',
-  youtube_embed_url: 'https://www.youtube.com/embed/1opgh7ky2nU'
+  youtube_embed_url: 'https://www.youtube.com/embed/L85-8eZdQKw'
 )
 file = File.open(Rails.root.join("db/seeds/instruments/guit.jpg"))
 guitare_acoustique.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
@@ -1046,7 +1046,7 @@ luth.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 
 # Mandoline (Mandolin)
 mandoline = Instrument.create!(
-  name: 'Mandoline',
+  name: 'Mandolin',
   family: 'String',
   tessitura: 'G3 to A6',
   materials: 'Wood, steel strings.',
