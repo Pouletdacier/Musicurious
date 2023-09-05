@@ -1,22 +1,28 @@
 <%# <p><strong> Slayy bitch 💅</strong></p> %>
 <%# <%@questions.each do |question| %>
-  <div class='container'>
-    <div>
+  <div class='container-quizz'>
+    <div class="title-quizz">
       <p>What is the name of this instrument?</p> <br>
-      <% instrument = Instrument.find(@question.instrument_id) %>
-      <%= cl_image_tag instrument.picture.key, :transformation => { :width => 300, :crop => "pad" } %>
     </div>
-    <% good_answer = @question.instrument_id %>
-    <% random_answers = Instrument.where.not(id: good_answer).order("RANDOM()").limit(3) %>
-    <% answers = random_answers.pluck(:id) %>
-    <% answers << good_answer %>
-    <div data-controller="quiz" >
-      <% answers.shuffle.each do |answer| %>
-        <div class="answer-choice" data-action="click->quiz#answer" data-target="quiz.answer" data-is-correct="<%= answer == good_answer %>">
-          <% instrument = Instrument.find(answer) %>
-          <%= instrument.name %>
-        </div>
-      <% end %>
+    <div class="question-picture">
+      <div class="question-picture-image">
+        <% instrument = Instrument.find(@question.instrument_id) %>
+        <%= cl_image_tag instrument.picture.key, :transformation => { :width => 350, :crop => "pad" } %>
+      </div>
+    </div>
+    <div class="answers-quizz-text">
+      <% good_answer = @question.instrument_id %>
+      <% random_answers = Instrument.where.not(id: good_answer).order("RANDOM()").limit(3) %>
+      <% answers = random_answers.pluck(:id) %>
+      <% answers << good_answer %>
+      <div class="answer-container" data-controller="quiz" >
+        <% answers.shuffle.each do |answer| %>
+          <div class="answer-choice" data-action="click->quiz#answer" data-target="quiz.answer" data-is-correct="<%= answer == good_answer %>">
+            <% instrument = Instrument.find(answer) %>
+            <%= instrument.name %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 <%# <% end %>
