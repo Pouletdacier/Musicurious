@@ -19,8 +19,8 @@
   width: 551px;
   height: 141px;
   flex-shrink: 0;
-  font-family: 'Jockey One', sans-serif; // Ensure Jockey One is imported or available in your stylesheets
-  font-size: 50px;
+  font-family: 'Fredoka One', sans-serif; // Ensure Jockey One is imported or available in your stylesheets
+  font-size: 42px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -36,14 +36,14 @@
 
   background: $vert-button;
 
-  
+
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   color: white; // Assuming you want white text color for the button
   text-align: center;
   // line-height: 44px;
   text-decoration: none;
   display: inline-block;
-  font-family: Jockey One;
+  font-family: 'Fredoka One';
   color: var(--white, #FFF);
 
   font-size: 25px;

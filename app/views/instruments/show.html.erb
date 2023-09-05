@@ -1,9 +1,21 @@
 <div class="instrument-show-container">
-  <div class="instrument-info">
-      <%= cl_image_tag @instrument.picture.key, crop: :lfill, resize: :lpad, class: "instrument-photo" %>
-      <%= cl_image_tag @instrument.photos.first.key, crop: :lfill, resize: :lpad, class: "instrument-photo instrument-photo-2" %>
+  <%# LEFT SIDE %>
+  <div class="left-side-inst">
+    <div class="instrument-info">
+        <%= cl_image_tag @instrument.picture.key, crop: :lfill, resize: :lpad, class: "instrument-photo" %>
+        <%= cl_image_tag @instrument.photos.first.key, crop: :lfill, resize: :lpad, class: "instrument-photo instrument-photo-2" %>
+    </div>
+
+    <div class="instrument-video-info">
+      <% if @instrument.youtube_embed_url.present? %>
+        <div class="instrument-video">
+          <iframe width="560" height="315" src="<%= @instrument.youtube_embed_url %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      <% end %>
+    </div>
   </div>
 
+  <%# RIGHT SIDE %>
   <div class="instrument-description">
     <div class="instrument-name">
       <%= @instrument.name %>
@@ -47,30 +59,41 @@
           </svg>
         </span>
         <span class="instrument-attribute-content"><%= @instrument.materials %></span>
-            <% if @instrument.audio.present? %>
-      <div class="instrument-audio">
-        <audio controls>
-          <source src="<%= @instrument.audio %>" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-    <% end %>
-  <%# code à noter ici pour faire les modifications %>
+
+        <% if @instrument.audio.present? %>
+          <div class="instrument-audio">
+            <audio controls>
+              <source src="<%= @instrument.audio %>" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        <% end %>
       </div>
     </div>
-
-
-
-    <% if @instrument.youtube_embed_url.present? %>
-      <div class="instrument-video">
-        <iframe width="560" height="315" src="<%= @instrument.youtube_embed_url %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    <% end %>
 
     <div class="suggestions">
-      <p>Suggested instruments</p>
+      <p class="suggestions_title">Suggested instruments</p>
+      <div class="s-card-suggest-container">
+        <% @random_instruments.each do |instrument| %>
+          <div class="s-card s-card-reco">
+            <%# IMG %>
+            <div class="s-card-image" style="background-image: url(<%= cl_image_path(instrument.picture.key, crop: :fill) %>);">
+              <div class="geographical-region"><%= instrument.geographical_region %></div>
+              <%= link_to "About", instrument_path(instrument), class: "m-btn-primary m-btn-primary-reco" %>
+            </div>
+            <%# INFOS %>
+            <div class="s-card-body">
+              <h4><strong><%= instrument.name %></strong></h4>
+              <p class="s-card-text">
+                <em><%= instrument.family %></em> <br>
+              </p>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
+
    <%= link_to instrument_favorites_path(@instrument), data: { turbo_method: :post } do %>
     <i class="fa-regular fa-heart"></i>
   <% end %>
