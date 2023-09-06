@@ -6,6 +6,12 @@ class InstrumentsController < ApplicationController
       @instruments = Instrument.all
     end
 
+    # favourites
+    if params[:favourite] == "1"
+      fav_instruments_ids = Favorite.where(user: current_user).pluck(:instrument_id)
+      @instruments = @instruments.where(id: fav_instruments_ids)
+    end
+
     # @instruments = Instrument.all
     if params[:zones].present?
       @instruments = @instruments.where(geographical_region: params[:zones])

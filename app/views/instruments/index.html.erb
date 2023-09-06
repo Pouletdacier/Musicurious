@@ -1,55 +1,62 @@
 
-<div class="row cards-container" data-controller="filter">
-  <div class="title">
+<div class="cards-container catalog-instru" data-controller="filter">
+  <div class="title-card title d-flex justify-content-between">
     <%= "Instruments of the world at your fingertips" %>
+      <!-- Bouton Filters -->
+      <button class="filter-button" data-action="click->filter#toggleFilters">
+        <i class="fa fa-sliders"></i> Filters
+      </button>
 
-    <!-- Bouton Filters -->
-    <button class="filter-button" data-action="click->filter#toggleFilters">
-      <i class="fa fa-sliders"></i> Filters
-    </button>
+      <!-- Panneau de filtres -->
+      <%= form_with url: instruments_path, method: :get, class: "filters-panel", id: "filtersPanel" do %>
 
-
-
-
-    <!-- Panneau de filtres -->
-    <%= form_with url: instruments_path, method: :get, class: "filters-panel", id: "filtersPanel" do %>
-      <div class="filter-category">
-        <h3>Geographic Zone:</h3>
-        <div class="filter-options">
-          <% ["North America", "South America", "Europe", "Africa", "Middle East", "Central Asia and East Asia", "South Asia", "Oceania"].each do |zone| %>
-
-            <label>
-              <input class="tag-selector" type="checkbox" name="zones[]" value="<%= zone %>" <%= 'checked' if params[:zones]&.include?(zone) %>>
-              <span><%= zone %></span>
-            </label>
-
-          <% end %>
-        </div>
-      </div>
-      <div class="filter-category">
-        <h3>Family Instrument:</h3>
-        <div class="filter-options">
-          <% ["String", "Percussion", "Woodwind", "Brass"].each do |family| %>
-
-            <label>
-              <input class= tag-selector type="checkbox" name="families[]" value="<%= family %>" <%= 'checked' if params[:families]&.include?(family) %>>
-              <span><%= family %></span>
-            </label>
-
-          <% end %>
+      <!-- Section Favourites -->
+        <div class="filter-category favourite-category">
+          <h3>Favourites</h3>
+          <div class="filter-options d-flex">
+            <div class="custo">
+              <input class="toggle" type="checkbox" id="favourite" name="favourite" value="1"
+              <%= 'checked' if params[:favourite] == "1" %>
+              <input class="toggle" type="checkbox" id="favourite" name="favourite" value="1"
+                <%= 'checked' if params[:favourite] == "1" %>
+                data-action="change->filter#submitFormOnChange"
+                data-target="filter.favourite">
+                
+              <label for="favourite"> ❤️ </label>
+            </div>
+          </div>
         </div>
 
 
+        <div class="filter-category">
+          <h3>Geographic Zone</h3>
+          <div class="filter-options d-flex">
+            <% ["North America", "South America", "Europe", "Africa", "Middle East", "Central Asia and East Asia", "South Asia", "Oceania"].each do |zone| %>
+            <div class="custo">
+              <input id="geo-<%= zone %>" class="tag-selector" type="checkbox" name="zones[]" value="<%= zone %>" <%= 'checked' if params[:zones]&.include?(zone) %>>
+              <label for="geo-<%= zone %>"><%= zone %></label>
+            </div>
 
+            <% end %>
+          </div>
+        </div>
 
+        <div class="filter-category second-category">
+          <h3>Family Instrument</h3>
+          <div class="filter-options d-flex">
+            <% ["String", "Percussion", "Woodwind", "Brass"].each do |family| %>
+              <div class="custo">
+                <input id="instru-<%= family %>" class= tag-selector type="checkbox" name="families[]" value="<%= family %>" <%= 'checked' if params[:families]&.include?(family) %>>
+                <label for="instru-<%= family %>"><%= family %></label>
+              </div>
+            <% end %>
+          </div>
 
-
-        <!-- Bouton Submit -->
-        <button class="submit-button">Submit</button>
-      </div>
-    <% end %>
+          <!-- Bouton Submit -->
+          <button class="submit-button">Submit</button>
+        </div>
+      <% end %>
   </div>
-
   <div class="cards-container">
     <% if @instruments.empty? %>
       <p class="no-instruments-message">No instruments found for "<%= params[:query] %>".</p>
