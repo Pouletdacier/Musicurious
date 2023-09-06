@@ -27,7 +27,7 @@
     height: 335px;
     width: 100%;
     border-radius: 8px;
-    background-color: $vert-clair;
+    background-color: #C5CDCC;
     object-fit: contain;
     object-position: center;
   }
@@ -101,6 +101,7 @@
       width: 100%;
       aspect-ratio: 16 / 9;
       height: auto;
+      margin-top: 16px;
     }
   }
 
