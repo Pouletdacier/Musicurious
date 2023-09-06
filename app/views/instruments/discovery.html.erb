@@ -1,16 +1,21 @@
 <%# <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> %>
-<script src="../javascript/controllers/favorites.js"></script>
 
 <div class="discover-container">
   <% @instruments.shuffle.each do |instrument| %>
     <div class="discovery-card-wrapper">
       <div class="discover-card">
         <%= cl_image_tag instrument.photos.first.key, crop: :lfill, resize: :lpad unless instrument.photos.empty? %>
-        <div class="like-icon-container">
-          <i class="far fa-heart like-icon"></i>
+        <div class="like-icon-container"
+              data-controller="likebutton"
+              data-likebutton-create-value=""
+              data-likebutton-target="get-id">
+          <%= link_to instrument_favorites_path(instrument), data: {turbo_method: :post} do %>
+            <i data-action = "click->likebutton#heart"data-likebutton-target="button"class="fa-regular fa-heart like-icon"style="color: #2a9d8f;"></i>
+          <% end %>
         </div>
         <%= link_to instrument.name, instrument_path(instrument), class: "discover-info" %>
       </div>
     </div>
   <% end %>
 </div>
+data
