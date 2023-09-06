@@ -15,7 +15,7 @@ class PagesController < ApplicationController
   end
 
   def quizz
-    # @questions = Question.all.shuffle
-    @question = Question.first
+    @questions = Question.all.shuffle
+    # @question = Question.first
   end
 end
