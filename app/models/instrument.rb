@@ -18,4 +18,16 @@ class Instrument < ApplicationRecord
     # (Optionnel) configurations supplémentaires si besoin
     searchableAttributes ['name', 'family']
   end
+
+  # def index
+  #   @instruments = Instrument.all
+  #   if params[:zones]
+  #     @instruments = @instruments.where(geographical_zone: params[:zones])
+  #   end
+  #   if params[:families]
+  #     @instruments = @instruments.where(family: params[:families])
+  #   end
+  # end
+
+
 end

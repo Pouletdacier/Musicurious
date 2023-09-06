@@ -17,6 +17,11 @@
 
   <%# RIGHT SIDE %>
   <div class="instrument-description">
+    <div class="like-show">
+      <%= link_to instrument_favorites_path(@instrument), data: { turbo_method: :post } do %>
+        <i class="fa-regular fa-heart"></i>
+      <% end %>
+    </div>
     <div class="instrument-name">
       <%= @instrument.name %>
     </div>
@@ -79,7 +84,7 @@
             <%# IMG %>
             <div class="s-card-image" style="background-image: url(<%= cl_image_path(instrument.picture.key, crop: :fill) %>);">
               <div class="geographical-region"><%= instrument.geographical_region %></div>
-              <%= link_to "About", instrument_path(instrument), class: "m-btn-primary m-btn-primary-reco" %>
+              <%= link_to "About", instrument_path(instrument), class: "m-btn-primary" %>
             </div>
             <%# INFOS %>
             <div class="s-card-body">
@@ -93,8 +98,4 @@
       </div>
     </div>
   </div>
-
-  <%= link_to instrument_favorites_path(@instrument), data: { turbo_method: :post } do %>
-    <i class="fa-regular fa-heart"></i>
-  <% end %>
 </div>

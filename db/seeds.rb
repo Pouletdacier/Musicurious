@@ -878,7 +878,7 @@ chalumeau.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jp
 # --- Charango ---
 charango = Instrument.create!(
   name: 'Charango',
-  family: 'Stringed',
+  family: 'String',
   tessitura: 'Mid to high range',
   materials: 'Wood and traditionally armadillo shells',
   origins: 'Originating in the Andes, the charango has 10 strings and is often used in traditional Andean music.',

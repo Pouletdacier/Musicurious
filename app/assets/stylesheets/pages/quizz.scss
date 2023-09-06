@@ -1,9 +1,63 @@
-/* Add a green halo for correct answers */
-.correct-answer {
-  border: 2px solid green;
+.title-quizz {
+  font-family: 'Fredoka One';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.question-picture {
+  background-color: #C5CDCC;
+  margin-inline: 60px;
+  text-align: center;
+  border-radius: 8px;
+  .information-quizz{
+    
+  }
+}
+
+.question-picture img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.answer-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-inline: 60px;
+  gap: 35px 50px;
+  margin-top: 30px;
+  margin-bottom: 80px;
+  cursor: pointer;
+}
+
+.answer-choice {
+  background-color: #D2D396;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  width: 100%;
+  border-radius: 8px;
+  height: 100px;
+  transition: .3s ease-in-out;
+}
+.answer-choice:hover {
+  background-color: #949557;
+  transition: .3s ease-in-out;
 }
 
 /* Add a red halo for incorrect answers */
-.incorrect-answer {
-  border: 2px solid red;
+.answer-choice.incorrect-answer {
+  background-color: #C82E2E;
+  transition: .3s ease-in-out;
+}
+
+/* Add a green halo for correct answers */
+.answer-choice.correct-answer {
+  background-color: #69CC46;
+  transition: .3s ease-in-out;
 }
