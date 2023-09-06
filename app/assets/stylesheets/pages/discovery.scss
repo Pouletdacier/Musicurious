@@ -19,18 +19,23 @@
       display: block;
       flex-shrink: 0;
     }
-    .like-icon-container{
+    .discover-heart-container{
       position: absolute;
       top: 10px;
       right: 10px;
       cursor: pointer;
+      background: rgba(197, 197, 197, 0.75);
+      border-radius: 5px;
+      padding: 6px 5px 5px;
+      a{
+        height: 25px;
+        display: block;
+      }
     }
-    .like-icon {
-      font-size: 180%;
+    .discover-heart {
+      // font-size: 180%;
+      font-size: 25px;
     }
-    // &.active {
-    //   color: red;
-    // }
 
     .discover-info{
       font-family: Inter;

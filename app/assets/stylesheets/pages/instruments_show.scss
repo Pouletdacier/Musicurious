@@ -8,9 +8,10 @@
   .left-side-inst {
     height: calc(100vh - 117px);
   }
-  .fa-heart {
-    width: 26px;
-    height: 22.235px;
+  .show-heart {
+    // width: 26px;
+    // height: 22.235px;
+    font-size: 25px;
     flex-shrink: 0;
     position: absolute;
     right: 20px;
@@ -158,10 +159,10 @@
 }
 
 
-.fa-heart:before {
-  color: #000;
-}
+// .fa-heart:before {
+//   color: #000;
+// }
 
-.fa-heart:after {
-  color: red;
-}
+// .fa-heart:after {
+//   color: red;
+// }
