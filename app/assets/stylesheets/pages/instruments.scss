@@ -12,7 +12,7 @@ $vert-foncé: #22755a; // Nouvelle couleur pour le bouton actif
   color: var(--noir, #000);
   text-align: center;
   font-family: 'Inter', sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -22,14 +22,15 @@ $vert-foncé: #22755a; // Nouvelle couleur pour le bouton actif
   position: absolute;
   top: 50%;
   right: 20px;
+  padding: 4px 8px;
   transform: translateY(-50%);
-  padding: 5px 10px;
+  border-radius: 20px;
+  margin-right: 50px;
+
   border: 1px solid rgba(0, 0, 0, 0.70);
   cursor: pointer;
   background-color: var(--lighty-gray, #DDD);
   color: var(--noir, #000);
-  border-radius: 20px;
-  margin-right: 50px;
 
   &:active {
     background-color: $vert-button;
@@ -37,97 +38,68 @@ $vert-foncé: #22755a; // Nouvelle couleur pour le bouton actif
   }
 }
 
+
+
+
 .filters-panel {
-  display: none;
   position: absolute;
   top: calc(50% + 25px);
-  right: 70px; // Modifié pour l'aligner avec le bouton
-  width: 23%;  // Un peu réduit pour le rendre plus petit
-  border: 1px solid $bleu-deep;
-  background-color: $vert-clair;
-  border-radius: 10px;
-  padding: 10px;
+  right: 60px;
+  width: 20%;
+
+  border: 1px solid #035359;
+  background-color: #8ab3ad;
+
+  border-radius: 20px;
+  padding: 7px;
   z-index: 10;
   font-family: 'Inter', sans-serif;
   box-shadow: 0 4px 8px rgba(170, 167, 167, 0.1);
 }
 
-.filter-category {
-  margin-bottom: 10px;
-  font-size: 16px;
+.tag-selector {
+  position: absolute;
+  transform: scale(0);
+}
 
-  h3 {
-    color: $bleu-deep;
-    margin-bottom: 8px;
-    border-bottom: 1px solid #000;
-    padding-bottom: 5px;
+.filter-category label span {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;  // Taille du texte
+  padding: 4px 8px;
+  border-radius: 20px; // On garde votre rayon de bord
+  background-color: #dfecea;  // Arrière plan des options
+  color: $bleu-deep;  // Couleur du texte par défaut
+  border: 1px solid $bleu-deep;  // Bordure
+  margin-right: 0.6rem;  // Espacement à droite
+  margin-bottom: 0.4rem;  // Espacement en bas
+  transition: background-color 0.2s ease, transform 0.1s ease;  // Transition pour des effets fluides
+
+  &:hover {
+    // background-color: darken(#22755a, 5%);  // Foncé lors du survol
+    // color: white;
+    transform: scale(1.05);  // Petit effet de zoom lors du survol
   }
+}
 
-  label {
-    display: block;
-    margin: 5px 0;
-    position: relative;
-    padding-left: 25px;
-    cursor: pointer;
+.tag-selector:checked + span {
+  background-color: #22755a;  // Couleur d'arrière-plan lorsqu'il est coché
+  color: white;  // Couleur du texte lorsqu'il est coché
+  border: 1px solid #22755a;  // Bordure
+}
 
-    input[type="checkbox"] {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-
-      &:checked + span::before {
-        background-color: $bleu-deep;
-        color: white;
-        content: '✓';
-        text-align: center;
-        line-height: 16px;
-      }
-    }
-
-    span {
-      display: block;
-      padding: 5px 10px;
-      border: 1px solid #0daa4a;
-      background-color: #80ba92;
-      color: white;
-      border-radius: 20px;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-
-      &:before {
-        content: "";
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        border-radius: 3px;
-        background-color: #FFF;
-        border: 1px solid #b3b3b3;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: background-color 0.3s ease;
-      }
-
-      &:hover {
-        background-color: darken(#456c51, 5%);
-        transform: scale(1.05);
-      }
-    }
-  }
 
   // Bouton Submit stylisé
   .submit-button {
     display: block;
-    margin: 15px auto 0;
-    padding: 10px 20px;
-    background-color: $vert-button;
+    margin: 2px auto;
+    padding: 5px 100px;
+    background-color: #065d73;
     color: white;
     border: none;
     border-radius: 20px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter';
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 
@@ -135,9 +107,3 @@ $vert-foncé: #22755a; // Nouvelle couleur pour le bouton actif
       background-color: $vert-foncé;
     }
   }
-}
-
-label input[type="checkbox"]:checked + span {
-  background-color: $bleu-deep;
-  color: white;
-}

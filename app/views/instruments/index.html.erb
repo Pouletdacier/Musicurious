@@ -8,16 +8,21 @@
       <i class="fa fa-sliders"></i> Filters
     </button>
 
+
+
+
     <!-- Panneau de filtres -->
     <%= form_with url: instruments_path, method: :get, class: "filters-panel", id: "filtersPanel" do %>
       <div class="filter-category">
         <h3>Geographic Zone:</h3>
         <div class="filter-options">
           <% ["North America", "South America", "Europe", "Africa", "Middle East", "Central Asia and East Asia", "South Asia", "Oceania"].each do |zone| %>
+
             <label>
-              <input type="checkbox" name="zones[]" value="<%= zone %>" <%= 'checked' if params[:zones]&.include?(zone) %>>
+              <input class="tag-selector" type="checkbox" name="zones[]" value="<%= zone %>" <%= 'checked' if params[:zones]&.include?(zone) %>>
               <span><%= zone %></span>
             </label>
+
           <% end %>
         </div>
       </div>
@@ -25,12 +30,19 @@
         <h3>Family Instrument:</h3>
         <div class="filter-options">
           <% ["String", "Percussion", "Woodwind", "Brass"].each do |family| %>
+
             <label>
-              <input type="checkbox" name="families[]" value="<%= family %>" <%= 'checked' if params[:families]&.include?(family) %>>
+              <input class= tag-selector type="checkbox" name="families[]" value="<%= family %>" <%= 'checked' if params[:families]&.include?(family) %>>
               <span><%= family %></span>
             </label>
+
           <% end %>
         </div>
+
+
+
+
+
 
         <!-- Bouton Submit -->
         <button class="submit-button">Submit</button>
