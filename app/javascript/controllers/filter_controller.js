@@ -9,4 +9,13 @@ export default class extends Controller {
             panel.style.display = 'none';
         }
     }
+
+    submitFormOnChange() {
+      if (this.hasFavouriteTarget) {
+          this.favouriteTarget.form.submit();
+      }
+  }
+
+
+
 }

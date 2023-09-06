@@ -1,12 +1,15 @@
-.title{
-  font-family: 'Fredoka One';
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-align: left;
-  margin-left: 40px;
-  margin-top: 50px;
+.title-card {
+  font-family: 'Fredoka One' !important;
+  font-size: 40px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: normal !important;
+  text-align: left !important;
+  margin: 50px 40px 0;
+  width: 100%;
+}
+.catalog-instru .title-card {
+  font-size: 22px !important;
 }
 .cards-container {
   display: flex;
