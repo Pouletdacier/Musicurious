@@ -1,24 +1,41 @@
-.map-pop-up{
-  max-width: 200px;
-  text-decoration: none;
-  color: black;
-  object-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  // align-items: center;
-  text-align: center;
-  border: none;
-  img{
-    max-width: 100px;
-    height: auto;
-    max-height: 200px;
-    // background-color: #C4B8B8;
-  }
-  h4, p{
-    color: #430C05;
-    padding: 0px !important;
-  }
+// .map-pop-up{
+//   max-width: 200px;
+//   text-decoration: none;
+//   color: black;
+//   object-position: center;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   // align-items: center;
+//   text-align: center;
+//   border: none;
+//   border-radius: 8px;
+
+//   img{
+//     max-width: 100px;
+//     height: auto;
+//     max-height: 200px;
+//     // background-color: #C4B8B8;
+//   }
+//   h4{
+//     color: #430C05;
+//     padding: 0px !important;
+//   }
+//   p{
+//     color: #ff1e00;
+//     padding: 0px !important;
+//   }
+// }
+.mapboxgl-map {
+  width: auto !important;
+  height: calc(100vh - 61px) !important;
+}
+.mapboxgl-canvas {
+  width: auto;
+  height: 100%;
+}
+.mapboxgl-control-container {
+  display: none;
 }
 .mapboxgl-popup{
   border: none !important;
@@ -42,4 +59,57 @@
     }
 .mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
     border-left-color: #fff;
+    }
+
+
+    .popup-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: #C5CDCC;
+    }
+
+    .map-pop-up {
+      width: 140px;
+      max-height: 300px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      background-color: #C5CDCC;
+      overflow: hidden;
+      margin-bottom: -10px;
+    }
+
+    .img-popup  img{
+      width: 100%;
+      height: auto;
+      max-height: 150px;
+      object-fit: contain;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position:relative;
+      // background-size: contain;
+      // background-position: center;
+      // background-repeat: no-repeat;
+    }
+
+    .pop-up-info {
+      padding: 10px;
+      text-align: left;
+      z-index: 2;
+      overflow: hidden;
+      background-color: white;
+      position: relative;
+      font-family: Fredoka One;
+      color: $vert-fon-fonce;
+      line-height: 0.8;
+      // margin-bottom: -20px;
+    }
+
+    h4{
+      margin-top: 10px;
     }
