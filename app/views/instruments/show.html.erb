@@ -17,10 +17,14 @@
 
   <%# RIGHT SIDE %>
   <div class="instrument-description">
-    <div class="like-show">
-      <%= link_to instrument_favorites_path(@instrument), data: { turbo_method: :post } do %>
-        <i class="fa-regular fa-heart"></i>
-      <% end %>
+    <div class="like-show" data-controller="likebutton">
+        <%= link_to instrument_favorites_path(@instrument), data: {turbo_method: :post} do %>
+          <% if Favorite.where(user: current_user, instrument: @instrument).present? %>
+            <i data-action = "click->likebutton#heart"data-likebutton-target="button"class="fa-solid fa-heart show-heart all-heart"style="color: #027f8a;"></i>
+          <% else %>
+            <i data-action = "click->likebutton#heart"data-likebutton-target="button"class="fa-regular fa-heart show-heart all-heart"style="color: #027f8a;"></i>
+          <% end %>
+        <% end %>
     </div>
     <div class="instrument-name">
       <%= @instrument.name %>
