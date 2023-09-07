@@ -82,6 +82,7 @@
 
     <div class="suggestions">
       <p class="suggestions_title">Suggested instruments</p>
+
       <div class="s-card-suggest-container">
 
 
@@ -93,12 +94,17 @@
 
             <div class="s-card-image" style="background-image: url(<%= cl_image_path(instrument.picture.key, crop: :fill) %>);">
               <div class="geographical-region"><%= instrument.geographical_region %></div>
-                <%= link_to "About", instrument_path(instrument), class: "m-btn-primary" %>
-              </div>
 
-              <%# INFOS %>
+              <%= link_to "About", instrument_path(instrument), class: "m-btn-primary" %>
+            </div>
+            <%# INFOS %>
+            <div class="card-body-show">
               <div class="s-card-body">
-                <h4><strong><%= instrument.name %></strong></h4>
+                <div class="s-card-name">
+                  <h4><strong><%= instrument.name %></strong></h4>
+                  <br>
+                </div>
+
                 <p class="s-card-text">
                   <em><%= instrument.family %></em> <br>
                 </p>
