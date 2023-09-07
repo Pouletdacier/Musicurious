@@ -76,10 +76,21 @@
           </div>
           <%# INFOS %>
           <div class="s-card-body">
-            <h4><strong><%= instrument.name %></strong></h4>
-            <p class="s-card-text">
-              <em><%= instrument.family %></em> <br>
-            </p>
+            <div class="">
+              <h4><strong><%= instrument.name %></strong></h4>
+              <p class="s-card-text">
+                <em><%= instrument.family %></em> <br>
+              </p>
+            </div>
+            <div class="like-cards" data-controller="likebutton">
+              <%= link_to instrument_favorites_path(instrument), data: {turbo_method: :post} do %>
+                <% if Favorite.where(user: current_user, instrument: instrument).present? %>
+                  <i data-action = "click->likebutton#heart"data-likebutton-target="button"class="fa-solid fa-heart discover-heart all-heart"style="color: #027f8a;"></i>
+                <% else %>
+                  <i data-action = "click->likebutton#heart"data-likebutton-target="button"class="fa-regular fa-heart discover-heart all-heart"style="color: #027f8a;"></i>
+                <% end %>
+              <% end %>
+            </div>
           </div>
         </div>
 

@@ -27,11 +27,10 @@ class InstrumentsController < ApplicationController
     if params[:families].present?
       @instruments = @instruments.where(family: params[:families])
     end
-
   end
 
   def discovery
-    @instruments = Instrument.all.except(picture: nil)
+    @instruments = Instrument.all.except(picture: nil).shuffle
   end
 
   def show

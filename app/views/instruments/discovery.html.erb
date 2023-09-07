@@ -1,7 +1,7 @@
 <%# <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> %>
 
 <div class="discover-container">
-  <% @instruments.shuffle.each do |instrument| %>
+  <% @instruments.each do |instrument| %>
   <% if instrument.picture != nil %>
 
       <div class="discovery-card-wrapper">
