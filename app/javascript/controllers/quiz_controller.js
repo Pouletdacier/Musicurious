@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="quiz"
 export default class extends Controller {
-  static targets = ["answer", "container"];
+  static targets = ["answer", "container", "next", "info"];
   static classes = ["correctAnswer", "incorrectAnswer"];
   // connect(){
   //   console.log(this.element)
@@ -31,6 +31,10 @@ export default class extends Controller {
       }
     }
     // setTimeout(() => {  console.log('World!'); }, 2000);
-    setTimeout(() => {this.element.classList.add("d-none"); }, 2000);
+    setTimeout(() => {this.nextTarget.classList.remove("d-none"); }, 500);
+  }
+
+  next(){
+    this.element.classList.add("d-none")
   }
 }
