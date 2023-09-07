@@ -18,15 +18,19 @@ class InstrumentsController < ApplicationController
     # favourites
     if params[:favourite] == "1"
       fav_instruments_ids = Favorite.where(user: current_user).pluck(:instrument_id)
-      @instruments = @instruments.where(id: fav_instruments_ids)
+      @instruments = @instruments.select { |instrument| fav_instruments_ids.include?(instrument.id) }
     end
 
     # @instruments = Instrument.all
     if params[:zones].present?
-      @instruments = @instruments.where(geographical_region: params[:zones])
+      # @instruments = @instruments.where(geographical_region: params[:zones])
+      # @instruments = @instruments.select(geographical_region: params[:zones])
+      @instruments = @instruments.select { |instrument| params[:zones].include?(instrument.geographical_region) }
     end
+
     if params[:families].present?
-      @instruments = @instruments.where(family: params[:families])
+      # @instruments = @instruments.where(family: params[:families])
+      @instruments = @instruments.select { |instrument| params[:families].include?(instrument.family) }
     end
   end
 
@@ -41,7 +45,7 @@ class InstrumentsController < ApplicationController
 
   def show
     @instrument = Instrument.find(params[:id])
-    @random_instruments = Instrument.joins(:picture_attachment).order('RANDOM()').limit(2)
+    @random_instruments = Instrument.includes(:picture_blob).where.not(picture_blob: { key: nil}).order('RANDOM()').limit(2)
   end
 
   def search
