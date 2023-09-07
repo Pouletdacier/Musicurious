@@ -28,7 +28,7 @@ puts 'Adding Instruments...'
 # Dobro
 dobro = Instrument.create!(
   name: 'Dobro',
-  family: 'Stringed',
+  family: 'Strings',
   tessitura: '4 octaves',
   materials: 'Wood, metal resonator',
   origins: 'The Dobro is a brand of resonator guitar, invented in the USA by the Dopyera brothers.',
@@ -65,11 +65,11 @@ sousaphone.photos.attach(io: file, filename: "photo.jpg", content_type: "image/j
 # Pedal Steel Guitar
 pedal_steel_guitar = Instrument.create!(
   name: 'Pedal Steel Guitar',
-  family: 'Stringed',
+  family: 'Strings',
   tessitura: '6 octaves',
   materials: 'Metal, wood, iron',
-  origins: 'The pedal steel guitar has no body, but two ten-string necks mounted on a console. Notes and chords are produced by sliding a metal bar over the plucked strings. Developed in the 1940s, it has become a classic instrument of Hawaiian and country music.',
-  more_info: 'The pedal steel guitar, originally from Mexico, was introduced to Hawaii around 1830. Joseph Kekuku, an early Hawaiian performer, was the first to slide an object along the strings.',
+  origins: 'The pedal steel guitar has no body, but two ten-string necks mounted on a console. Notes and chords are produced by sliding a metal bar over the plucked strings.',
+  more_info: 'Developed in the 1940s, it has become a classic instrument of Hawaiian and country music. Joseph Kekuku was the first Hawaiian performer to slide an object along the strings.',
   geographical_region: 'North America',
   town: 'Mexico',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Guitare_pedalsteel.mp3',
@@ -84,7 +84,7 @@ pedal_steel_guitar.photos.attach(io: file, filename: "photo.jpg", content_type: 
 # Cuica
 cuica = Instrument.create!(
   name: 'Cuica',
-  family: 'Percussion',
+  family: 'Percussions',
   tessitura: 'Varies',
   materials: 'Wood, animal skin',
   origins: 'An Afro-Brazilian friction drum with a large pitch range.',
@@ -121,7 +121,7 @@ diple.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 # Chitarrone
 chitarrone = Instrument.create!(
   name: 'Chitarrone',
-  family: 'Stringed',
+  family: 'Strings',
   tessitura: '4 octaves',
   materials: 'Wood',
   origins: 'An extended lute used in Italy during the Renaissance and Baroque periods.',
@@ -139,7 +139,7 @@ chitarrone.photos.attach(io: file, filename: "photo.jpg", content_type: "image/j
 # Krar
 krar = Instrument.create!(
   name: 'Krar',
-  family: 'Stringed',
+  family: 'Strings',
   tessitura: '2.5 octaves',
   materials: 'Wood, animal skin',
   origins: 'A traditional Ethiopian and Eritrean stringed instrument.',
@@ -158,7 +158,7 @@ krar.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 # Sékéré
 sekere = Instrument.create!(
   name: 'Sekere',
-  family: 'Percussion',
+  family: 'Percussions',
   tessitura: 'Varies',
   materials: 'Gourd, beads or cowries',
   origins: 'A percussion instrument from Nigeria, made of a gourd with a net of beads or cowries.',
@@ -177,7 +177,7 @@ sekere.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg"
 # Kamanche
 kamanche = Instrument.create!(
   name: 'Kamanche',
-  family: 'Stringed',
+  family: 'Strings',
   tessitura: '3 octaves',
   materials: 'Wood with a skin membrane',
   origins: 'Traditional spiked fiddle of Persia (Iran)',
@@ -195,7 +195,7 @@ kamanche.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpe
 # Shofar
 shofar = Instrument.create!(
   name: 'Shofar',
-  family: 'Aerophone',
+  family: 'Woodwinds',
   tessitura: 'Depends on the length',
   materials: 'Ram’s horn',
   origins: 'Ancient Jewish musical horn.',
@@ -213,12 +213,12 @@ shofar.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg"
 # Erhu
 erhu = Instrument.create!(
   name: 'Erhu',
-  family: 'Stringed',
+  family: 'Strings',
   tessitura: '3 octaves',
   materials: 'Wood and snake skin',
-  origins: 'Traditional two-stringed fiddle from China.',
-  more_info: 'Known for its mournful and expressive sound.',
-  geographical_region: 'Central and East Asia',
+  origins: 'The erhu is a 2-stringed Chinese hurdy-gurdy. Its size varies around 66 cm in length.',
+  more_info: 'The instrument\'s small hexagonal body is crossed by a long, narrow neck, sometimes ending in a carved dragon or bat head.',
+  geographical_region: 'Central Asia and East Asia',
   town: 'Beijing',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Erhu.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/lSCHU3kwrm8'
@@ -236,7 +236,7 @@ dizi = Instrument.create!(
   materials: 'Bamboo',
   origins: 'Traditional Chinese transverse flute.',
   more_info: 'Features a membrane covering one of the holes to produce a buzzing sound.',
-  geographical_region: 'Central and East Asia',
+  geographical_region: 'Central Asia and East Asia',
   town: 'Shanghai',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Di.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/lI1L2l6vi-4'
@@ -249,7 +249,7 @@ dizi.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 # Tabla
 tabla = Instrument.create!(
   name: 'Tabla',
-  family: 'Percussion',
+  family: 'Percussions',
   tessitura: 'Varies',
   materials: 'Wood and animal skin',
   origins: 'Traditional Indian percussion instrument.',
@@ -267,7 +267,7 @@ tabla.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 # Vina (assuming you mean Veena)
 veena = Instrument.create!(
   name: 'Veena',
-  family: 'Stringed',
+  family: 'Strings',
   tessitura: '4 octaves',
   materials: 'Wood',
   origins: 'Ancient musical instrument of India.',
@@ -291,7 +291,7 @@ khene = Instrument.create!(
   origins: 'The Khene is a large mouth organ from Southeast Asia. It belongs to a family of instruments that includes the Chinese cheng and the Japanese sho. It is common in northern Thailand, Laos and Birmania.',
   more_info: 'The length of the pipes determines the pitch of the note. It can vary from 90cm to 2m20',
   geographical_region: 'South Asia',
-  town: 'Udon Thani',
+  town: 'Bangkok',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Khene.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/DIfi9wDDpUQ'
 )
@@ -303,7 +303,7 @@ khene.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 # Didgeridoo
 didgeridoo = Instrument.create!(
   name: 'Didgeridoo',
-  family: 'Aerophone',
+  family: 'Woddwind',
   tessitura: 'Fundamental frequency with overtones',
   materials: 'Eucalyptus wood, traditionally hollowed out by termites',
   origins: 'Traditional wind instrument developed by Indigenous Australians.',
@@ -321,7 +321,7 @@ didgeridoo.photos.attach(io: file, filename: "photo.jpg", content_type: "image/j
 # Appalachian Zither
 appalachian_zither = Instrument.create!(
   name: 'Appalachian Zither',
-  family: 'Stringed',
+  family: 'Strings',
   tessitura: 'Variable depending on size and tuning',
   materials: 'Usually made of wood',
   origins: 'The Appalachian Zither comes from the Appalachian region of the United States.',
@@ -339,7 +339,7 @@ appalachian_zither.photos.attach(io: file, filename: "photo.jpg", content_type: 
 # Steel Drum
 steel_drum = Instrument.create!(
   name: 'Steel Drum',
-  family: 'Percussion',
+  family: 'Percussions',
   tessitura: 'Ranges from 2 to over 4 octaves depending on type',
   materials: 'Made of steel',
   origins: 'Originated in Trinidad and Tobago.',
@@ -357,13 +357,13 @@ steel_drum.photos.attach(io: file, filename: "photo.jpg", content_type: "image/j
 # Syrinx (Pan Flute)
 syrinx = Instrument.create!(
   name: 'Syrinx',
-  family: 'Woodwind',
-  tessitura: 'Approximately 2 octaves',
+  family: 'Woodwinds',
+  tessitura: 'Variable, generally 2 octaves',
   materials: 'Made of bamboo or reeds',
-  origins: 'Historically used in many cultures, particularly in ancient Greece.',
-  more_info: 'Also known as the Pan flute.',
-  geographical_region: 'Europe',
-  town: 'Athens',
+  origins: 'The Pan flute or syrinx comprises a series of pipes of unequal length, assembled in a raft. The notes are produced by blowing on the top opening of the tubes.',
+  more_info: 'Pan flutes have been used since prehistoric times all over the world and are still popular, especially in South America.',
+  geographical_region: 'South America',
+  town: 'Manaus',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Flute_pan.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/R3C3aNSOHXk'
 )
@@ -375,7 +375,7 @@ syrinx.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg"
 # Cromorne
 cromorne = Instrument.create!(
   name: 'Cromorne',
-  family: 'Woodwind',
+  family: 'Woodwinds',
   tessitura: 'About 2 octaves',
   materials: 'Made of wood',
   origins: 'Medieval Europe, precursor to the modern oboe.',
@@ -393,7 +393,7 @@ cromorne.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpe
 # Celesta
 celesta = Instrument.create!(
   name: 'Celesta',
-  family: 'Percussion',
+  family: 'Percussions',
   tessitura: '4-5 octaves',
   materials: 'Metal plates with a wooden resonator',
   origins: 'Invented in France in the late 19th century.',
@@ -411,7 +411,7 @@ celesta.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg
 # Mbira
 mbira = Instrument.create!(
   name: 'Mbira',
-  family: 'Percussion',
+  family: 'Percussions',
   tessitura: 'Around 2-3 octaves',
   materials: 'Metal tines mounted on a wooden platform',
   origins: 'Traditional instrument of the Shona people of Zimbabwe.',
@@ -430,7 +430,7 @@ mbira.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 # Nay
 nay = Instrument.create!(
   name: 'Nay',
-  family: 'Woodwind',
+  family: 'Woodwinds',
   tessitura: 'About 2.5 octaves',
   materials: 'Made of reed',
   origins: 'Ancient Middle Eastern instrument, commonly associated with Sufi music.',
@@ -448,12 +448,12 @@ nay.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 # Suona
 suona = Instrument.create!(
   name: 'Suona',
-  family: 'Woodwind',
+  family: 'Woodwinds',
   tessitura: 'Around 2 octaves',
   materials: 'Made of wood with a metal bell',
   origins: 'Traditional Chinese instrument.',
   more_info: 'A double-reed instrument with a distinctively loud and high-pitched sound.',
-  geographical_region: 'Central and East Asia',
+  geographical_region: 'Central Asia and East Asia',
   town: 'Qingdao',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Suona.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/F-T25H17tHk'
@@ -466,11 +466,11 @@ suona.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 # Sitar
 sitar = Instrument.create!(
   name: 'Sitar',
-  family: 'Stringed',
+  family: 'Strings',
   tessitura: 'Around 3 octaves',
   materials: 'Made of wood with a gourd resonator',
-  origins: 'Originated from ancient India.',
-  more_info: 'Used extensively in Hindustani classical music.',
+  origins: 'The sitar is a large, long-necked lute renowned for its vibrant, haunting sound. It is the instrument of North Indian and Pakistani classical music, where it is accompanied by tabla drums and the tambura lute.',
+  more_info: 'Sitar comes from the name \'setar\' which means \'three strings\'.',
   geographical_region: 'South Asia',
   town: 'Jaipur',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Sitar.mp3',
@@ -484,7 +484,7 @@ sitar.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 # Slit drum
 slit_drum = Instrument.create!(
   name: 'Slit drum',
-  family: 'Percussion',
+  family: 'Percussions',
   tessitura: 'Variable depending on size',
   materials: 'Carved from a single log',
   origins: 'Common in various cultures around the world, particularly in Africa and the Pacific.',
@@ -502,7 +502,7 @@ slit_drum.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jp
 # Balalaika
 balalaika = Instrument.create!(
   name: 'Balalaika',
-  family: 'Stringed',
+  family: 'Strings',
   tessitura: 'Varies by size; there are prima, secunda, alto, bass, and contrabass balalaikas',
   materials: 'Wood, with a triangular body shape',
   origins: 'The balalaika is a traditional Russian stringed instrument, dating back to the 17th century.',
@@ -520,7 +520,7 @@ balalaika.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jp
 
 angklung = Instrument.create!(
   name: 'Angklung',
-  family: 'Percussion',
+  family: 'Percussions',
   tessitura: 'Variable, depends on size and tuning',
   materials: 'Bamboo tubes suspended within a bamboo frame',
   origins: 'Traditionally from the Sundanese people of West Java and Banten provinces in Indonesia.',
@@ -538,7 +538,7 @@ angklung.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpe
 # --- Atumpan ---
 atumpan = Instrument.create!(
   name: 'Atumpan',
-  family: 'Percussion',
+  family: 'Percussions',
   tessitura: 'Low to mid-range',
   materials: 'Wood with stretched animal skin',
   origins: 'Traditional drum from the Akan people of Ghana.',
@@ -558,7 +558,7 @@ atumpan.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg
 # --- Algaïta ---
 algaita = Instrument.create!(
   name: 'Algaïta',
-  family: 'Woodwind',
+  family: 'Woodwinds',
   tessitura: 'Mid-range',
   materials: 'Wood with a double reed',
   origins: 'Commonly used in the Hausa regions of Northern Nigeria and Niger.',
@@ -578,7 +578,7 @@ algaita.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg
 # --- Accordéon à touches ---
 key_accordion = Instrument.create!(
   name: 'Key Accordion',
-  family: 'Woodwind',
+  family: 'Woodwinds',
   tessitura: 'Mid-range',
   materials: 'Wood, metal, and plastic',
   origins: 'Originated in Europe in the early 19th century.',
@@ -596,7 +596,7 @@ key_accordion.photos.attach(io: file, filename: "photo.jpg", content_type: "imag
 # --- Accordéon à boutons ---
 accordeon_boutons = Instrument.create!(
   name: 'Button accodeon',
-  family: 'Woodwind',
+  family: 'Woodwinds',
   tessitura: 'Mid-range',
   materials: 'Wood, metal, and plastic',
   origins: 'Evolved in Europe and is popular in traditional music of various countries.',
@@ -616,7 +616,7 @@ accordeon_boutons.photos.attach(io: file, filename: "photo.jpg", content_type: "
 # --- Bala ---
 bala = Instrument.create!(
   name: 'Bala',
-  family: 'Percussion',
+  family: 'Percussions',
   tessitura: 'Variable across a wide range',
   materials: 'Wooden keys with gourd resonators',
   origins: 'Traditionally from the Mandinka people of West Africa.',
@@ -636,7 +636,7 @@ bala.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 # --- Banjo ---
 banjo = Instrument.create!(
   name: 'Banjo',
-  family: 'String',
+  family: 'Strings',
   tessitura: 'High to mid-range',
   materials: 'Wood with a circular drum-like body',
   origins: 'Developed in the United States from African and European instruments.',
@@ -655,7 +655,7 @@ banjo.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 # --- Basson ---
 basson = Instrument.create!(
   name: 'Bassoon',
-  family: 'Woodwind',
+  family: 'Woodwinds',
   tessitura: 'Bass to tenor',
   materials: 'Usually made of maple wood',
   origins: 'Developed in the 16th century in Europe, evolving from earlier double-reeded instruments.',
@@ -673,7 +673,7 @@ basson.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg"
 # --- Batterie (Drums) ---
 batterie = Instrument.create!(
   name: 'Drums',
-  family: 'Percussion',
+  family: 'Percussions',
   tessitura: 'Variable from deep bass (kick drum) to high pitch (cymbals)',
   materials: 'Wood, metal, and synthetic materials',
   origins: 'Drums have ancient origins, seen in many cultures globally. Modern drum kits evolved in the U.S. during the 20th century.',
@@ -691,7 +691,7 @@ batterie.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpe
 # --- Berimbau ---
 berimbau = Instrument.create!(
   name: 'Berimbau',
-  family: 'Stringed',
+  family: 'Strings',
   tessitura: 'none',
   materials: 'Wooden bow with a steel string, and a gourd resonator',
   origins: 'An integral part of Brazilian Capoeira, the berimbau has African roots.',
@@ -709,7 +709,7 @@ berimbau.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpe
 # --- Bloc à deux tons (Two-tone block) ---
 two_tone_block = Instrument.create!(
   name: 'Two-tone block',
-  family: 'Percussion',
+  family: 'Percussions',
   tessitura: 'High-pitched',
   materials: 'Wood or synthetic materials',
   origins: 'Inspired by traditional wooden temple blocks used in East Asia.',
@@ -727,7 +727,7 @@ two_tone_block.photos.attach(io: file, filename: "photo.jpg", content_type: "ima
 # --- Bonang ---
 bonang = Instrument.create!(
   name: 'Bonang',
-  family: 'Percussion',
+  family: 'Percussions',
   tessitura: 'Mid-range',
   materials: 'Bronze or brass pots mounted on a wooden frame',
   origins: 'Integral to the Javanese and Balinese gamelan ensemble of Indonesia.',
@@ -747,7 +747,7 @@ bonang.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg"
 # --- Bongos ---
 bongos = Instrument.create!(
   name: 'Bongos',
-  family: 'Percussion',
+  family: 'Percussions',
   tessitura: 'High-pitched',
   materials: 'Wood with animal skin heads',
   origins: 'Originated in Cuba, drawing inspiration from African hand drums.',
@@ -765,7 +765,7 @@ bongos.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg"
 # --- Bouzouki ---
 bouzouki = Instrument.create!(
   name: 'Bouzouki',
-  family: 'String',
+  family: 'Strings',
   tessitura: 'Mid to high range',
   materials: 'Wood with steel strings',
   origins: 'Introduced to Greece in the 1900s, influenced by ancient Greek and Turkish instruments.',
@@ -802,7 +802,7 @@ bugle.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 # --- Cajon ---
 cajon = Instrument.create!(
   name: 'Cajon',
-  family: 'Percussion',
+  family: 'Percussions',
   tessitura: 'Low to mid-range',
   materials: 'Primarily wood',
   origins: 'Originated in Peru, the Cajon was influenced by African slaves who made these instruments from shipping crates.',
@@ -822,7 +822,7 @@ cajon.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 # --- Carillon ---
 carillon = Instrument.create!(
   name: 'Carillon',
-  family: 'Percussion',
+  family: 'Percussions',
   tessitura: 'Variable depending on number of bells',
   materials: 'Bronze bells',
   origins: 'Originated in Europe, carillons can be found in church towers and municipal buildings.',
@@ -840,7 +840,7 @@ carillon.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpe
 # --- Castanets (Castagnettes) ---
 castanets = Instrument.create!(
   name: 'Castanets',
-  family: 'Percussion',
+  family: 'Percussions',
   tessitura: 'High-pitched',
   materials: 'Wood, sometimes plastic',
   origins: 'With ancient roots, castanets are especially known for their role in Spanish flamenco music.',
@@ -859,7 +859,7 @@ castanets.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jp
 # --- Chalumeau ---
 chalumeau = Instrument.create!(
   name: 'Chalumeau',
-  family: 'Woodwind',
+  family: 'Woodwinds',
   tessitura: 'Mid to high range',
   materials: 'Wood, with metal keys',
   origins: 'The chalumeau is a single-reed woodwind instrument and is considered the predecessor to the modern clarinet.',
@@ -878,7 +878,7 @@ chalumeau.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jp
 # --- Charango ---
 charango = Instrument.create!(
   name: 'Charango',
-  family: 'String',
+  family: 'Strings',
   tessitura: 'Mid to high range',
   materials: 'Wood and traditionally armadillo shells',
   origins: 'Originating in the Andes, the charango has 10 strings and is often used in traditional Andean music.',
@@ -897,12 +897,12 @@ charango.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpe
 # Dung chen
 dung_chen = Instrument.create!(
   name: 'Dung chen',
-  family: 'Aerophone',
+  family: 'Woodwinds',
   tessitura: 'Varies depending on size',
   materials: 'Brass or copper, sometimes with silver or gold decoration.',
   origins: 'Indigenous to the Tibetan region.',
   more_info: 'Long trumpet or horn used in Tibetan Buddhist ceremonies. It produces deep tones that are used to call together the community and spirits.',
-  geographical_region: 'Central and East Asia',
+  geographical_region: 'Central Asia and East Asia',
   town: 'Lhasa',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Dungchen.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/cO9oUe0S-Lg'
@@ -917,7 +917,7 @@ dung_chen.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jp
 # Contrebasse (Double Bass)
 contrebasse = Instrument.create!(
   name: 'Contrabass',
-  family: 'String',
+  family: 'Strings',
   tessitura: 'E1 to G4',
   materials: 'Usually carved from spruce or maple wood.',
   origins: 'Has its roots in Europe during the 15th century, evolving from the viol family of instruments.',
@@ -936,7 +936,7 @@ contrebasse.photos.attach(io: file, filename: "photo.jpg", content_type: "image/
 # Flûte Piccolo
 flute_piccolo = Instrument.create!(
   name: 'Piccolo',
-  family: 'Woodwind',
+  family: 'Woodwinds',
   tessitura: 'D5 to C8',
   materials: 'Wood, silver, or other metals.',
   origins: 'Derived from older flutes and adapted in Europe.',
@@ -954,12 +954,12 @@ flute_piccolo.photos.attach(io: file, filename: "photo.jpg", content_type: "imag
 # Guimbarde
 guimbarde = Instrument.create!(
   name: 'Jaw harp',
-  family: 'Idiophone',
+  family: 'Percussions',
   tessitura: 'Varies based on size and design',
   materials: 'Steel, bamboo, or bone.',
-  origins: 'Ancient instrument found in various forms across Asia, Europe, and Oceania.',
-  more_info: 'Also known as Jewish harp, mouth harp, or jaw harp, it is played by plucking a reed while altering the shape of the mouth to produce different pitches.',
-  geographical_region: 'Central and East Asia',
+  origins: 'Ancient instrument found in various forms across Asia, Europe, and Oceania.It is played by plucking a reed while altering the shape of the mouth to produce different pitches.',
+  more_info: 'Some 5th-century Jew\'s harps have been found in their owners\' tombs, proving that they were considered valuable objects.',
+  geographical_region: 'Central Asia and East Asia',
   town: 'Ulaanbaatar',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Guimbarde.mp3',
   youtube_embed_url: 'https://www.youtube.com/embed/tXLoP9iSU5Y'
@@ -972,8 +972,8 @@ guimbarde.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jp
 
 # Guitare basse Steinberger
 guitare_basse_steinberger = Instrument.create!(
-  name: 'Bass guitar Steinberger',
-  family: 'String',
+  name: 'Steinberger',
+  family: 'Strings',
   tessitura: 'E1 to G3',
   materials: 'Carbon fiber or wood, depending on the model.',
   origins: 'Introduced in the 1980s by Ned Steinberger.',
@@ -991,7 +991,7 @@ guitare_basse_steinberger.photos.attach(io: file, filename: "photo.jpg", content
 # Guitare acoustique (Acoustic Guitar)
 guitare_acoustique = Instrument.create!(
   name: 'Acoustic guitar',
-  family: 'String',
+  family: 'Strings',
   tessitura: 'E2 to E6',
   materials: 'Various woods like spruce, cedar, and rosewood.',
   origins: 'Roots trace back to ancient civilizations but modern design evolved in Spain.',
@@ -1009,8 +1009,8 @@ guitare_acoustique.photos.attach(io: file, filename: "photo.jpg", content_type: 
 
 # Harpe celtique (Celtic Harp)
 harpe_celtique = Instrument.create!(
-  name: 'Harpe celtique',
-  family: 'String',
+  name: 'Celtic Harp',
+  family: 'Strings',
   tessitura: 'Varies based on size, generally C2 to C6',
   materials: 'Wood, strings are usually nylon or gut.',
   origins: 'Ancient instrument with roots in Ireland and Scotland.',
@@ -1029,7 +1029,7 @@ harpe_celtique.photos.attach(io: file, filename: "photo.jpg", content_type: "ima
 # Luth (Lute)
 luth = Instrument.create!(
   name: 'Luth',
-  family: 'String',
+  family: 'Strings',
   tessitura: 'Varies, often D2 to A5',
   materials: 'Wood, with gut or nylon strings.',
   origins: 'Medieval Europe, influenced by earlier Arab oud.',
@@ -1047,7 +1047,7 @@ luth.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 # Mandoline (Mandolin)
 mandoline = Instrument.create!(
   name: 'Mandolin',
-  family: 'String',
+  family: 'Strings',
   tessitura: 'G3 to A6',
   materials: 'Wood, steel strings.',
   origins: 'Developed in Italy in the 18th century.',
@@ -1084,7 +1084,7 @@ trompette.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jp
 # Nyckelharpa
 nyckelharpa = Instrument.create!(
   name: 'Nyckelharpa',
-  family: 'String',
+  family: 'Strings',
   tessitura: 'C3 to C6',
   materials: 'Wood, with steel or gut strings.',
   origins: 'Sweden, dating back to the medieval period.',
@@ -1102,8 +1102,8 @@ nyckelharpa.photos.attach(io: file, filename: "photo.jpg", content_type: "image/
 # Autoharp
 autoharpe = Instrument.create!(
   name: 'Autoharp',
-  family: 'String',
-  tessitura: 'Varies based on model, generally G2 to E6',
+  family: 'Strings',
+  tessitura: 'Generally G2 to E6',
   materials: 'Wood with steel strings.',
   origins: 'Originally patented in the US in the late 19th century.',
   more_info: 'A string instrument with a series of chord bars attached to dampers. When a chord bar is pressed, it mutes all strings not in that chord.',
@@ -1116,6 +1116,695 @@ file = File.open(Rails.root.join("db/seeds/instruments/autoharpe.jpg"))
 autoharpe.picture.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
 file = File.open(Rails.root.join("db/seeds/discovery/AUTOHARPE P.jpg"))
 autoharpe.photos.attach(io: file, filename: "photo.jpg", content_type: "image/jpeg")
+
+
+
+
+
+
+
+
+# FAKE SEED
+
+
+# --- Cithare (Zither) ---
+zither = Instrument.create!(
+  name: 'Zither',
+  family: 'Strings',
+  town: 'Innsbruck',
+)
+
+# --- Clairon (Bugle) ---
+bugle = Instrument.create!(
+  name: 'Bugle',
+  family: 'Brass',
+  town: 'Brussels',
+)
+
+# --- Clarinette (Clarinet) ---
+clarinet = Instrument.create!(
+  name: 'Clarinet',
+  family: 'Woodwinds',
+  town: 'Budapest',
+)
+
+# --- Clavicorde (Clavichord) ---
+clavichord = Instrument.create!(
+  name: 'Clavichord',
+  family: 'Strings',
+  town: 'Zermatt',
+)
+
+# --- Contrebasson (Contrabassoon) ---
+contrabassoon = Instrument.create!(
+  name: 'Contrabassoon',
+  family: 'Woodwinds',
+  town: 'Pretoria',
+)
+
+# --- Cor anglais (English Horn) ---
+english_horn = Instrument.create!(
+  name: 'English Horn',
+  family: 'Woodwinds',
+  town: 'Prague',
+)
+
+# --- Curtal (Dulcian) ---
+dulcian = Instrument.create!(
+  name: 'Dulcian',
+  family: 'Woodwinds',
+  town: 'Lisbon',
+)
+
+# --- Cymbalum (Cimbalom) ---
+cimbalom = Instrument.create!(
+  name: 'Cimbalom',
+  family: 'Strings',
+  town: 'Bucharest',
+)
+
+# --- Congas ---
+congas = Instrument.create!(
+  name: 'Congas',
+  family: 'Percussions',
+  town: 'Bogota',
+)
+
+# --- Darbouka ---
+darbouka = Instrument.create!(
+  name: 'Darbouka',
+  family: 'Percussions',
+  town: 'Algiers',
+)
+
+# --- Djembe ---
+djembe = Instrument.create!(
+  name: 'Djembe',
+  family: 'Percussions',
+  town: 'Kaolack',
+)
+
+# --- Duda (Bagpipe) ---
+duda = Instrument.create!(
+  name: 'Duda',
+  family: 'Woodwinds',
+  town: 'Budva',
+)
+
+# --- Dvojnice ---
+dvojnice = Instrument.create!(
+  name: 'Dvojnice',
+  family: 'Woodwinds',
+  town: 'Sarajevo',
+)
+
+# --- Epinette (Spinet) ---
+spinet = Instrument.create!(
+  name: 'Spinet',
+  family: 'Strings',
+  town: 'Antwerp',
+)
+
+# --- Fifre (Fife) ---
+fife = Instrument.create!(
+  name: 'Fife',
+  family: 'Woodwinds',
+  town: 'Edinburgh',
+)
+
+# --- Flûte nasale (Nose Flute) ---
+nose_flute = Instrument.create!(
+  name: 'Nose Flute',
+  family: 'Woodwinds',
+  town: 'Suva', # Fiji
+)
+
+# --- Flûte traversière (Transverse Flute) ---
+transverse_flute = Instrument.create!(
+  name: 'Transverse Flute',
+  family: 'Woodwinds',
+  town: 'Salto',
+)
+
+# --- Fouet (Whip) ---
+whip = Instrument.create!(
+  name: 'Whip',
+  family: 'Percussions',
+  town: 'Brisbane',
+)
+
+# --- Gender (Gamelan metallophones) ---
+gender = Instrument.create!(
+  name: 'Gender',
+  family: 'Percussions',
+  town: 'Jakarta',
+)
+
+# --- Ghara (Earthen pot) ---
+ghara = Instrument.create!(
+  name: 'Ghara',
+  family: 'Percussions',
+  town: 'Dhaka', # Bangladesh
+)
+
+# --- Glockenspiel ---
+glockenspiel = Instrument.create!(
+  name: 'Glockenspiel',
+  family: 'Percussions',
+  town: 'Stuttgart',
+)
+
+# --- Gong ageng ---
+gong_ageng = Instrument.create!(
+  name: 'Gong Ageng',
+  family: 'Percussions',
+  town: 'Surabaya',
+)
+
+# --- Güiro ---
+guïro = Instrument.create!(
+  name: 'Güiro',
+  family: 'Percussions',
+  town: 'San Jose', # Costa Rica
+)
+
+# --- Harmonica ---
+harmonica = Instrument.create!(
+  name: 'Harmonica',
+  family: 'Free Reed',
+  town: 'Chicago',
+)
+
+# --- Harmonium ---
+harmonium = Instrument.create!(
+  name: 'Harmonium',
+  family: 'Strings',
+  town: 'Kolkata',
+)
+
+# --- Hichiriki ---
+hichiriki = Instrument.create!(
+  name: 'Hichiriki',
+  family: 'Woodwinds',
+  town: 'Kyoto',
+)
+
+# --- Kalangu ---
+kalangu = Instrument.create!(
+  name: 'Kalangu',
+  family: 'Percussions',
+  town: 'Maiduguri', # Nigeria
+)
+
+# --- Kantele ---
+kantele = Instrument.create!(
+  name: 'Kantele',
+  family: 'Strings',
+  town: 'Helsinki',
+)
+
+# --- Kendang ---
+kendang = Instrument.create!(
+  name: 'Kendang',
+  family: 'Percussions',
+  town: 'Denpasar', # Bali, Indonesia
+)
+
+# --- Kéna (Quena) ---
+quena = Instrument.create!(
+  name: 'Quena',
+  family: 'Woodwinds',
+  town: 'Sucre', # Bolivia
+)
+
+# --- Kora ---
+kora = Instrument.create!(
+  name: 'Kora',
+  family: 'Strings',
+  town: 'Banjul', # Gambia
+)
+
+# --- Koto ---
+koto = Instrument.create!(
+  name: 'Koto',
+  family: 'Strings',
+  town: 'Tokyo',
+)
+
+# --- Kotsuzumi ---
+kotsuzumi = Instrument.create!(
+  name: 'Kotsuzumi',
+  family: 'Percussions',
+  town: 'Osaka',
+)
+
+# --- Kugué ---
+kugué = Instrument.create!(
+  name: 'Kugué',
+  family: 'String',
+  town: 'Asunción', # Paraguay
+)
+
+# --- Launeddas ---
+launeddas = Instrument.create!(
+  name: 'Launeddas',
+  family: 'Woodwinds',
+  town: 'Cagliari', # Sardinia, Italy
+)
+
+# --- Manjira ---
+manjira = Instrument.create!(
+  name: 'Manjira',
+  family: 'Percussions',
+  town: 'Hyderabad',
+)
+
+# --- Maracas ---
+maracas = Instrument.create!(
+  name: 'Maracas',
+  family: 'Percussions',
+  town: 'Caracas', # Venezuela
+)
+
+# --- Marimba ---
+marimba = Instrument.create!(
+  name: 'Marimba',
+  family: 'Percussions',
+  town: 'Quetzaltenango', # Guatemala
+)
+
+# --- Mridangam ---
+mridangam = Instrument.create!(
+  name: 'Mridangam',
+  family: 'Percussions',
+  town: 'Bengaluru', # India
+)
+
+# --- Muyu (Wooden Fish) ---
+muyu = Instrument.create!(
+  name: 'Muyu',
+  family: 'Percussions',
+  town: 'Hangzhou', # China
+)
+
+
+# --- Naqqara ---
+naqqara = Instrument.create!(
+  name: 'Naqqara',
+  family: 'Percussions',
+  town: 'Baghdad', # Iraq
+)
+
+# --- Ocarina ---
+ocarina = Instrument.create!(
+  name: 'Ocarina',
+  family: 'Woodwinds',
+  town: 'La Plata', # Argentina
+)
+
+# --- Odaïko ---
+odaïko = Instrument.create!(
+  name: 'Odaïko',
+  family: 'Percussions',
+  town: 'Sapporo', # Japan
+)
+
+# --- Pipa ---
+pipa = Instrument.create!(
+  name: 'Pipa',
+  family: 'Strings',
+  town: 'Xian', # China
+)
+
+# --- Pungi ---
+pungi = Instrument.create!(
+  name: 'Pungi',
+  family: 'Woodwinds',
+  town: 'Lucknow', # India
+)
+
+# --- Qin ---
+qin = Instrument.create!(
+  name: 'Qin',
+  family: 'Strings',
+  town: 'Wuhan', # China
+)
+
+# --- Ud (Oud) ---
+oud = Instrument.create!(
+  name: 'Oud',
+  family: 'Strings',
+  town: 'Damascus', # Syria
+)
+
+# --- Rebab arabo-andalou ---
+rebab_arabo_andalou = Instrument.create!(
+  name: 'Rebab Arabo-Andalou',
+  family: 'Strings',
+  town: 'Tangier', # Morocco
+)
+
+# --- Rebec ---
+rebec = Instrument.create!(
+  name: 'Rebec',
+  family: 'Strings',
+  town: 'Granada', # Spain
+)
+
+# --- Rhombe (Bullroarer) ---
+bullroarer = Instrument.create!(
+  name: 'Bullroarer',
+  family: 'Percussions',
+  town: 'Wellington', # New Zealand
+)
+
+# --- Rkang-gling ---
+rkang_gling = Instrument.create!(
+  name: 'Rkang-gling',
+  family: 'Woodwinds',
+  town: 'Thimphu', # Bhutan
+)
+
+# --- Zummara ---
+zummara = Instrument.create!(
+  name: 'Zummara',
+  family: 'Woodwinds',
+  town: 'Alexandria', # Egypt
+)
+
+# --- Zurna ---
+zurna = Instrument.create!(
+  name: 'Zurna',
+  family: 'Woodwinds',
+  town: 'Baku', # Azerbaijan
+)
+
+# --- Zukra ---
+zukra = Instrument.create!(
+  name: 'Zukra',
+  family: 'Woodwinds',
+  town: 'Tunis', # Tunisia
+)
+
+# --- Zilli masa (Cymbals) ---
+zilli_masa = Instrument.create!(
+  name: 'Zilli Masa',
+  family: 'Percussions',
+  town: 'Ankara', # Turkey
+)
+
+# --- Zampogna ---
+zampogna = Instrument.create!(
+  name: 'Zampogna',
+  family: 'Woodwinds',
+  town: 'Palermo', # Italy
+)
+
+# --- Yueqin ---
+yueqin = Instrument.create!(
+  name: 'Yueqin',
+  family: 'Strings',
+  town: 'Guangzhou', # China
+)
+
+# --- Vibraphone ---
+vibraphone = Instrument.create!(
+  name: 'Vibraphone',
+  family: 'Percussions',
+  town: 'Toronto', # Canada
+)
+
+# --- Valiha ---
+valiha = Instrument.create!(
+  name: 'Valiha',
+  family: 'Strings',
+  town: 'Antananarivo', # Madagascar
+)
+
+# --- Sahnaï (Shehnai) ---
+shehnai = Instrument.create!(
+  name: 'Shehnai',
+  family: 'Woodwinds',
+  town: 'Varanasi', # India
+)
+
+# --- Saqueboute (Sackbut) ---
+sackbut = Instrument.create!(
+  name: 'Sackbut',
+  family: 'Brass',
+  town: 'Geneva', # Switzerland
+)
+
+# --- Sarangi ---
+sarangi = Instrument.create!(
+  name: 'Sarangi',
+  family: 'Strings',
+  town: 'Kathmandu', # Nepal
+)
+
+# --- Saùng-gauk ---
+saùng_gauk = Instrument.create!(
+  name: 'Saùng-gauk',
+  family: 'Strings',
+  town: 'Naypyidaw', # Myanmar
+)
+
+# --- Shakuhachi ---
+shakuhachi = Instrument.create!(
+  name: 'Shakuhachi',
+  family: 'Woodwinds',
+  town: 'Kobe', # Japan
+)
+
+# --- Shamisen ---
+shamisen = Instrument.create!(
+  name: 'Shamisen',
+  family: 'String',
+  town: 'Nagoya', # Japan
+)
+
+# --- Sistre (Sistrum) ---
+sistrum = Instrument.create!(
+  name: 'Sistrum',
+  family: 'Percussions',
+  town: 'Luxor', # Egypt
+)
+
+# --- Tam-tam ---
+tam_tam = Instrument.create!(
+  name: 'Tam-tam',
+  family: 'Percussions',
+  town: 'Yaoundé', # Cameroon
+)
+
+# --- Tambour de chaman (Shaman Drum) ---
+shaman_drum = Instrument.create!(
+  name: 'Shaman Drum',
+  family: 'Percussions',
+  town: 'Erdenet', # Mongolia
+)
+
+# --- Tambour sur cadre ou tambourin (Frame Drum) ---
+frame_drum = Instrument.create!(
+  name: 'Frame Drum',
+  family: 'Percussions',
+  town: 'Amman', # Jordan
+)
+
+# --- Tambour-hochet (Rattle Drum) ---
+rattle_drum = Instrument.create!(
+  name: 'Rattle Drum',
+  family: 'Percussions',
+  town: 'Tarija', # Bolivia
+)
+
+# --- Timbales ---
+timbales = Instrument.create!(
+  name: 'Timbales',
+  family: 'Percussions',
+  town: 'San Juan', # Puerto Rico
+)
+
+# --- Tuba ---
+tuba = Instrument.create!(
+  name: 'Tuba',
+  family: 'Brass',
+  town: 'Minneapolis', # USA
+)
+
+transverse_horn = Instrument.create!(
+  name: 'Transverse Horn',
+  family: 'Brass',
+  town: 'Dakar', # Senegal
+)
+
+natural_trumpet = Instrument.create!(
+  name: 'Natural Trumpet',
+  family: 'Brass',
+  town: 'Abidjan', # Ivory Coast (Côte d'Ivoire)
+)
+
+claves = Instrument.create!(
+  name: 'Claves',
+  family: 'Percussions',
+  town: 'Montevideo', # Uruguay
+)
+
+andean_harp = Instrument.create!(
+  name: 'Andean Harp',
+  family: 'Strings',
+  town: 'Arequipa', # Peru
+)
+
+# --- Guitare basse (Bass Guitar) ---
+bass_guitar = Instrument.create!(
+  name: 'Bass Guitar',
+  family: 'Strings',
+  town: 'Boston', # Massachusetts, USA
+)
+
+# --- Guitare basse sans frette (Fretless Bass Guitar) ---
+fretless_bass_guitar = Instrument.create!(
+  name: 'Fretless Bass Guitar',
+  family: 'Strings',
+  town: 'Providence', # Rhode Island, USA
+)
+
+# --- Guitare classique (Classical Guitar) ---
+classical_guitar = Instrument.create!(
+  name: 'Classical Guitar',
+  family: 'Strings',
+  town: 'Palma', # Spain
+)
+
+# --- Guitare douze cordes (Twelve-string Guitar) ---
+twelve_string_guitar = Instrument.create!(
+  name: 'Twelve-string Guitar',
+  family: 'Strings',
+  town: 'Charleston', # South Carolina, USA
+)
+
+# --- Guitare électrique (Electric Guitar) ---
+electric_guitar = Instrument.create!(
+  name: 'Electric Guitar',
+  family: 'Strings',
+  town: 'Cleveland', # Ohio, USA
+)
+
+# --- Guitare électrique à caisse creuse (Hollow-body Electric Guitar) ---
+hollow_body_electric_guitar = Instrument.create!(
+  name: 'Hollow-body Electric Guitar',
+  family: 'Strings',
+  town: 'Pittsburgh', # Pennsylvania, USA
+)
+
+# --- Guitare électrique Les Paul (Les Paul Electric Guitar) ---
+les_paul_electric_guitar = Instrument.create!(
+  name: 'Les Paul Electric Guitar',
+  family: 'Strings',
+  town: 'Richmond', # Virginia, USA
+)
+
+# --- Guitare Torres (Torres Guitar) ---
+torres_guitar = Instrument.create!(
+  name: 'Torres Guitar',
+  family: 'Strings',
+  town: 'Ronda', # SPAIN
+)
+
+
+# --- Hand Horn ---
+hand_horn = Instrument.create!(
+  name: 'Hand Horn',
+  family: 'Brass',
+  town: 'Lyon', # France
+)
+
+# --- French Horn (Harmony Horn) ---
+french_horn = Instrument.create!(
+  name: 'French Horn',
+  family: 'Brass',
+  town: 'Munich', # Germany
+)
+
+# --- Post Horn ---
+post_horn = Instrument.create!(
+  name: 'Post Horn',
+  family: 'Brass',
+  town: 'Zurich', # Switzerland
+)
+
+# --- Alpine Horn ---
+alpine_horn = Instrument.create!(
+  name: 'Alpine Horn',
+  family: 'Brass',
+  town: 'Bern', # Switzerland
+)
+
+# --- Northumberland Bagpipes ---
+northumberland_bagpipes = Instrument.create!(
+  name: 'Northumberland Bagpipes',
+  family: 'Woodwinds',
+  town: 'Newcastle', # United Kingdom
+)
+
+# --- Cornett ---
+cornett = Instrument.create!(
+  name: 'Cornett',
+  family: 'Brass',
+  town: 'Ypres', # Belgium
+)
+
+# --- Cornet ---
+cornet = Instrument.create!(
+  name: 'Cornet',
+  family: 'Brass',
+  town: 'Gand', # Belgium
+)
+
+# --- Saxhorn ---
+saxhorn = Instrument.create!(
+  name: 'Saxhorn',
+  family: 'Brass',
+  town: 'Liege', # Belgium
+)
+
+# --- Wagner Tuba ---
+wagner_tuba = Instrument.create!(
+  name: 'Wagner Tuba',
+  family: 'Brass',
+  town: 'Leipzig', # Germany
+)
+
+# --- Piccolo Trumpet ---
+piccolo_trumpet = Instrument.create!(
+  name: 'Piccolo Trumpet',
+  family: 'Brass',
+  town: 'Dresden', # Germany
+)
+
+# --- Slide Trumpet ---
+slide_trumpet = Instrument.create!(
+  name: 'Slide Trumpet',
+  family: 'Brass',
+  town: 'Liberec', # Czech Republic
+)
+
+# --- Valve Trombone ---
+valve_trombone = Instrument.create!(
+  name: 'Valve Trombone',
+  family: 'Brass',
+  town: 'Pecs', # Hungary
+)
+
+# --- Trombone ---
+trombone = Instrument.create!(
+  name: 'Trombone',
+  family: 'Brass',
+  town: 'Warsaw', # Poland
+)
+
+
 
 puts 'Adding questions and answers...'
 question1= Question.create!(prompt: 'Which one of these is the Dobro?', instrument_id: dobro.id)

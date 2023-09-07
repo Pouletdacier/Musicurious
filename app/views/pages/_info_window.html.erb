@@ -1,13 +1,21 @@
 <div class="popup-container">
   <%= link_to instrument_path(instrument), style: "text-decoration: none;" do %>
     <div class= "map-pop-up">
-      <div class="img-popup">
-        <%= cl_image_tag instrument.picture.key, crop: :lfill, resize: :lpad, class: "popup-photo" %> <br>
-      </div>
+
       <div class= pop-up-info>
-        <h4><%=instrument.name%></h4> <br>
-        <p><%= instrument.family %></p> <br>
-      </div>
+      <% if instrument.picture.attached? %>
+          <div class="img-popup">
+            <%= cl_image_tag instrument.picture.key, crop: :lfill, resize: :lpad, class: "popup-photo" %> <br>
+          </div>
+          <h4><%=instrument.name%></h4> <br>
+          <p><%= instrument.family %></p> <br>
+
+        <% else  %>
+              <h4><%=instrument.name%></h4> <br>
+              <p><%= instrument.family %></p> <br>
+            </div>
+      <% end %>
+
     </div>
   <% end %>
 </div>
