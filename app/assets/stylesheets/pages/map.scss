@@ -23,19 +23,20 @@
 .img-popup{
   max-height: 150px;
   img{
-  width: 100%;
-  height: auto;
-  max-height: 150px;
-  object-fit: contain;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position:relative;
-  padding: 3px;
-  background-color: #C5CDCC;
-  // background-size: contain;
-  // background-position: center;
-  // background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    //padding: 3px;
+    padding: 10px;
+    background-color: #C5CDCC;
+    // background-size: contain;
+    // background-position: center;
+    // background-repeat: no-repeat;
   }
 }
 
