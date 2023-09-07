@@ -14,6 +14,7 @@ export default class extends Controller {
       container: this.element,
       style: "mapbox://styles/jeanconseil/clm7h2a73011x01pf903120jl"
       // style: "mapbox://styles/mapbox/satellite-v9"
+      //api.mapbox.com/styles/v1/jeanconseil/clm7h2a73011x01pf903120jl.html?title=view&access_token=pk.eyJ1IjoiamVhbmNvbnNlaWwiLCJhIjoiY2xsMHJjdmw5MWZleTNkbXpld2kyODRxdyJ9.NaQwgh3yg0uuyEtpHYu-GA&zoomwheel=true&fresh=true#2.41/22.76/90.44
     })
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
