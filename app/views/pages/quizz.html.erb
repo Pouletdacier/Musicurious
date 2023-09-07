@@ -5,6 +5,14 @@
     </div>
      <% instrument = Instrument.find(question.instrument_id) %>
     <div class="question-picture">
+      <% link_to instrument_path(instrument) do%>
+        <div class= "quiz-instrument-info d-none" data-quiz-target="info">
+          <i class="fa-solid fa-info quiz-info fa-beat"></i>
+        </div>
+      <% end %>
+      <div class= "next-question d-none" data-quiz-target="next" data-action="click->quiz#next">
+        <i class="fa-solid fa-arrow-right fa-beat arrow"style="color: #ffffff;"></i>
+      </div>
       <%= cl_image_tag instrument.picture.key, height:400, crop: :fill %>
     </div>
     <div class="answers-quizz-text">
