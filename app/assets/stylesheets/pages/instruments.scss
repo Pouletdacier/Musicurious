@@ -40,7 +40,7 @@ $vert-foncé: #22755a; // Nouvelle couleur pour le bouton actif
 }
 
 .filters-panel {
-  // display: none; // COMMENTER CETTE LIGNE AU MOMENT D'INSPECTER POUR SCSS
+  display: none; // COMMENTER CETTE LIGNE AU MOMENT D'INSPECTER POUR SCSS
   position: absolute;
   top: calc(50% + 30px);
   right: 0;
@@ -51,6 +51,8 @@ $vert-foncé: #22755a; // Nouvelle couleur pour le bouton actif
   font-family: "Inter" , sans-serif;
   box-shadow: 0 4px 8px rgba(170, 167, 167, 0.1);
 }
+
+
 
 .tag-selector {
   position: absolute;
@@ -80,9 +82,9 @@ $vert-foncé: #22755a; // Nouvelle couleur pour le bouton actif
 }
 
 .tag-selector:checked + label {
-  background-color: #22755a;  // Couleur d'arrière-plan lorsqu'il est coché
+  background-color: #225575;  // Couleur d'arrière-plan lorsqu'il est coché
   color: white;  // Couleur du texte lorsqu'il est coché
-  border: 1px solid #22755a;  // Bordure
+  border: 1px solid #225575;  // Bordure
 }
 
 
@@ -90,8 +92,9 @@ $vert-foncé: #22755a; // Nouvelle couleur pour le bouton actif
   .submit-button {
     display: block;
     margin: 20px auto 0;
+    margin-left: -0.5px;
     padding: 5px 4%;
-    background-color: #065d73;
+    background-color: #0d3b46;
     color: white;
     border: none;
     border-radius: 20px;
@@ -131,12 +134,12 @@ $vert-foncé: #22755a; // Nouvelle couleur pour le bouton actif
     height: 20px;
     top: 0;
     left: 0;
-    background-color: #EAEAEA;
+    background-color: #4d4b4b;
     border-radius: 50rem;
   }
 
   .toggle:checked + label::before {
-    background-color: #315991;
+    background-color: #128e65;
   }
 
   .toggle + label::after {

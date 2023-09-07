@@ -68,8 +68,8 @@ pedal_steel_guitar = Instrument.create!(
   family: 'Strings',
   tessitura: '6 octaves',
   materials: 'Metal, wood, iron',
-  origins: 'The pedal steel guitar has no body, but two ten-string necks mounted on a console. Notes and chords are produced by sliding a metal bar over the plucked strings.',
-  more_info: 'Developed in the 1940s, it has become a classic instrument of Hawaiian and country music. Joseph Kekuku was the first Hawaiian performer to slide an object along the strings.',
+  origins: 'The pedal steel guitar has two ten-string necks mounted on a console. Notes and chords are produced by sliding a metal bar over the strings.',
+  more_info: 'Developed in the 1940s, it has become a classic instrument of Hawaiian and country music.',
   geographical_region: 'North America',
   town: 'Mexico',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Guitare_pedalsteel.mp3',
@@ -288,7 +288,7 @@ khene = Instrument.create!(
   family: 'Woodwinds',
   tessitura: '2 octaves',
   materials: 'Made of bamboo',
-  origins: 'The Khene is a large mouth organ from Southeast Asia. It belongs to a family of instruments that includes the Chinese cheng and the Japanese sho. It is common in northern Thailand, Laos and Birmania.',
+  origins: 'The Khene is a large mouth organ from Southeast Asia. It is common in northern Thailand, Laos and Birmania.',
   more_info: 'The length of the pipes determines the pitch of the note. It can vary from 90cm to 2m20',
   geographical_region: 'South Asia',
   town: 'Bangkok',
@@ -360,8 +360,8 @@ syrinx = Instrument.create!(
   family: 'Woodwinds',
   tessitura: 'Variable, generally 2 octaves',
   materials: 'Made of bamboo or reeds',
-  origins: 'The Pan flute or syrinx comprises a series of pipes of unequal length, assembled in a raft. The notes are produced by blowing on the top opening of the tubes.',
-  more_info: 'Pan flutes have been used since prehistoric times all over the world and are still popular, especially in South America.',
+  origins: 'The Pan flute or syrinx comprises a series of pipes of unequal length, assembled in a raft.',
+  more_info: 'Pan flutes have been used since prehistoric times and are still popular in South America.',
   geographical_region: 'South America',
   town: 'Manaus',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Flute_pan.mp3',
@@ -900,8 +900,8 @@ dung_chen = Instrument.create!(
   family: 'Woodwinds',
   tessitura: 'Varies depending on size',
   materials: 'Brass or copper, sometimes with silver or gold decoration.',
-  origins: 'Indigenous to the Tibetan region.',
-  more_info: 'Long trumpet or horn used in Tibetan Buddhist ceremonies. It produces deep tones that are used to call together the community and spirits.',
+  origins: 'Indigenous to the Tibetan region. Long trumpet or horn used in Tibetan Buddhist ceremonies. ',
+  more_info: 'It produces deep tones that are used to call together the community and spirits.',
   geographical_region: 'Central Asia and East Asia',
   town: 'Lhasa',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Dungchen.mp3',
@@ -940,7 +940,7 @@ flute_piccolo = Instrument.create!(
   tessitura: 'D5 to C8',
   materials: 'Wood, silver, or other metals.',
   origins: 'Derived from older flutes and adapted in Europe.',
-  more_info: 'The highest pitched instrument in the orchestra, producing a bright, piercing sound. It is half the size of a standard concert flute.',
+  more_info: 'The highest pitched instrument in the orchestra, producing a bright, piercing sound.',
   geographical_region: 'Europe',
   town: 'Milan',
   audio: 'http://www.instrumentsdumonde.fr/instrument/sons/Flute_piccolo.mp3',
@@ -957,7 +957,7 @@ guimbarde = Instrument.create!(
   family: 'Percussions',
   tessitura: 'Varies based on size and design',
   materials: 'Steel, bamboo, or bone.',
-  origins: 'Ancient instrument found in various forms across Asia, Europe, and Oceania.It is played by plucking a reed while altering the shape of the mouth to produce different pitches.',
+  origins: 'Ancient instrument found in various forms across Asia, Europe, and Oceania.',
   more_info: 'Some 5th-century Jew\'s harps have been found in their owners\' tombs, proving that they were considered valuable objects.',
   geographical_region: 'Central Asia and East Asia',
   town: 'Ulaanbaatar',
@@ -1812,5 +1812,21 @@ question2= Question.create!(prompt: 'Which one of these is the Sitar?', instrume
 question3= Question.create!(prompt: 'Which one of these is the Suona?', instrument_id: suona.id)
 question4= Question.create!(prompt: 'Which one of these is the Nay?', instrument_id: nay.id)
 question5= Question.create!(prompt: 'Which one of these is the Balalaika?', instrument_id: balalaika.id)
+question6= Question.create!(prompt: 'Which one of these is the Khene?', instrument_id: khene.id)
+question7= Question.create!(prompt: 'Which one of these is the Algaita?', instrument_id: algaita.id)
+question8= Question.create!(prompt: 'Which one of these is the Didgeridoo?', instrument_id: didgeridoo.id)
+question9= Question.create!(prompt: 'Which one of these is the Cromorne?', instrument_id: cromorne.id)
+question10= Question.create!(prompt: 'Which one of these is the Shofar?', instrument_id: shofar.id)
+question11= Question.create!(prompt: 'Which one of these is the Erhu?', instrument_id: erhu.id)
+question12= Question.create!(prompt: 'Which one of these is the Castanets?', instrument_id: castanets.id)
+question13= Question.create!(prompt: 'Which one of these is the Chalumeau?', instrument_id: chalumeau.id)
+question14= Question.create!(prompt: 'Which one of these is the Charango?', instrument_id: charango.id)
+question15= Question.create!(prompt: 'Which one of these is the Luth?', instrument_id: luth.id)
+question16= Question.create!(prompt: 'Which one of these is the Kamanche?', instrument_id: kamanche.id)
+question17= Question.create!(prompt: 'Which one of these is the Dizi?', instrument_id: dizi.id)
+question18= Question.create!(prompt: 'Which one of these is the Krar?', instrument_id: krar.id)
+question19= Question.create!(prompt: 'Which one of these is the Diple?', instrument_id: diple.id)
+question20= Question.create!(prompt: 'Which one of these is the Tabla?', instrument_id: tabla.id)
+
 
 puts '...The circle is completed!'
