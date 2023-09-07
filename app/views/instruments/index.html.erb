@@ -1,61 +1,63 @@
 
 <div class="cards-container catalog-instru" data-controller="filter">
   <div class="title-card title d-flex justify-content-between">
-    <%= "Instruments of the world at your fingertips" %>
+    <p>
+      Instruments of the world at your fingertips
+    </p>
       <!-- Bouton Filters -->
-      <button class="filter-button" data-action="click->filter#toggleFilters">
-        <i class="fa fa-sliders"></i> Filters
-      </button>
+    <button class="filter-button" data-action="click->filter#toggleFilters">
+      <i class="fa fa-sliders"></i> Filters
+    </button>
 
-      <!-- Panneau de filtres -->
-      <%= form_with url: instruments_path, method: :get, class: "filters-panel", id: "filtersPanel" do %>
+    <!-- Panneau de filtres -->
+    <%= form_with url: instruments_path, method: :get, class: "filters-panel", id: "filtersPanel" do %>
 
       <!-- Section Favourites -->
-        <div class="filter-category favourite-category">
-          <h3>Favourites</h3>
-          <div class="filter-options d-flex">
-            <div class="custo">
-              <input class="toggle" type="checkbox" id="favourite" name="favourite" value="1"
+      <div class="filter-category favourite-category">
+        <h3>Favourites</h3>
+        <div class="filter-options d-flex">
+          <div class="custo">
+            <input class="toggle" type="checkbox" id="favourite" name="favourite" value="1"
               <%= 'checked' if params[:favourite] == "1" %>
-              <input class="toggle" type="checkbox" id="favourite" name="favourite" value="1"
-                <%= 'checked' if params[:favourite] == "1" %>
-                data-action="change->filter#submitFormOnChange"
-                data-target="filter.favourite">
+            <input class="toggle" type="checkbox" id="favourite" name="favourite" value="1"
+              <%= 'checked' if params[:favourite] == "1" %>
+              data-action="change->filter#submitFormOnChange"
+              data-target="filter.favourite">
 
-              <label for="favourite"> <i class="fas fa-heart"></i> </label>
-            </div>
+            <label for="favourite"> <i class="fas fa-heart"></i> </label>
           </div>
         </div>
+      </div>
 
 
-        <div class="filter-category">
-          <h3>Geographic Zone</h3>
-          <div class="filter-options d-flex">
-            <% ["North America", "South America", "Europe", "Africa", "Middle East", "Central Asia and East Asia", "South Asia", "Oceania"].each do |zone| %>
+      <div class="filter-category">
+        <h3>Geographic Zone</h3>
+        <div class="filter-options d-flex">
+          <% ["North America", "South America", "Europe", "Africa", "Middle East", "Central Asia and East Asia", "South Asia", "Oceania"].each do |zone| %>
             <div class="custo">
               <input id="geo-<%= zone %>" class="tag-selector" type="checkbox" name="zones[]" value="<%= zone %>" <%= 'checked' if params[:zones]&.include?(zone) %>>
               <label for="geo-<%= zone %>"><%= zone %></label>
             </div>
 
-            <% end %>
-          </div>
+          <% end %>
         </div>
+      </div>
 
-        <div class="filter-category second-category">
-          <h3>Family Instrument</h3>
-          <div class="filter-options d-flex">
-            <% ["Strings", "Percussions", "Woodwinds", "Brass"].each do |family| %>
-              <div class="custo">
-                <input id="instru-<%= family %>" class= tag-selector type="checkbox" name="families[]" value="<%= family %>" <%= 'checked' if params[:families]&.include?(family) %>>
-                <label for="instru-<%= family %>"><%= family %></label>
-              </div>
-            <% end %>
-          </div>
+      <div class="filter-category second-category">
+        <h3>Family Instrument</h3>
+        <div class="filter-options d-flex">
+          <% ["Strings", "Percussions", "Woodwinds", "Brass"].each do |family| %>
+            <div class="custo">
+              <input id="instru-<%= family %>" class= tag-selector type="checkbox" name="families[]" value="<%= family %>" <%= 'checked' if params[:families]&.include?(family) %>>
+              <label for="instru-<%= family %>"><%= family %></label>
+            </div>
+          <% end %>
+        </div>
 
           <!-- Bouton Submit -->
-          <button class="submit-button">Submit</button>
-        </div>
-      <% end %>
+        <button class="submit-button">Submit</button>
+      </div>
+    <% end %>
   </div>
 
 
@@ -63,11 +65,9 @@
   <%# <% if @instrument.instrument.picture.attached? %>
     <% if @instruments.empty? %>
       <p class="no-instruments-message">No instruments found for "<%= params[:query] %>".</p>
-      <% else %>
+    <% else %>
 
-    <% @instruments.each do |instrument| %>
-      <% if instrument.picture.attached? %>
-
+      <% @instruments.each do |instrument| %>
         <div class="s-card">
           <%# IMG %>
           <div class="s-card-image" style="background-image: url(<%= cl_image_path(instrument.picture.key, crop: :fill) %>);">
@@ -93,9 +93,6 @@
             </div>
           </div>
         </div>
-
-
-        <% end %>
       <% end %>
     <% end %>
   </div>

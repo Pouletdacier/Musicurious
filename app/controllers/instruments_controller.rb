@@ -6,7 +6,8 @@ class InstrumentsController < ApplicationController
     #   @instruments = Instrument.all
     # end
 
-    @instruments = Instrument.all.except(image: nil)
+    @instruments = Instrument.includes(:picture_blob).where.not(picture_blob: { key: nil}).shuffle
+
     if params[:search]
       @instruments.search(params[:search])
     else
@@ -30,7 +31,7 @@ class InstrumentsController < ApplicationController
   end
 
   def discovery
-    @instruments = Instrument.all.except(picture: nil).shuffle
+    @instruments = Instrument.includes(:picture_blob).where.not(picture_blob: { key: nil}).shuffle
   end
 
   # def show
