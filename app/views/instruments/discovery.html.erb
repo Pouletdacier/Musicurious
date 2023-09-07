@@ -1,7 +1,7 @@
 <%# <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> %>
 
 <div class="discover-container">
-  <% @instruments.shuffle.each do |instrument| %>
+  <% @instruments.each do |instrument| %>
     <div class="discovery-card-wrapper">
       <div class="discover-card">
         <%= cl_image_tag instrument.photos.first.key, crop: :lfill, resize: :lpad unless instrument.photos.empty? %>
