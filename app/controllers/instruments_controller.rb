@@ -1,10 +1,18 @@
 class InstrumentsController < ApplicationController
   def index
+    # if params[:search]
+    #   @instruments = Instrument.search(params[:search])
+    # else
+    #   @instruments = Instrument.all
+    # end
+
+    @instruments = Instrument.all.except(image: nil)
     if params[:search]
-      @instruments = Instrument.search(params[:search])
+      @instruments.search(params[:search])
     else
-      @instruments = Instrument.all
+      @instruments
     end
+
 
     # favourites
     if params[:favourite] == "1"
@@ -23,7 +31,7 @@ class InstrumentsController < ApplicationController
   end
 
   def discovery
-    @instruments = Instrument.all
+    @instruments = Instrument.all.except(picture: nil)
   end
 
   def show

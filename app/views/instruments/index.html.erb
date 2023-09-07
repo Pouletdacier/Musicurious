@@ -21,7 +21,7 @@
                 <%= 'checked' if params[:favourite] == "1" %>
                 data-action="change->filter#submitFormOnChange"
                 data-target="filter.favourite">
-                
+
               <label for="favourite"> ❤️ </label>
             </div>
           </div>
@@ -57,11 +57,17 @@
         </div>
       <% end %>
   </div>
+
+
   <div class="cards-container">
+  <%# <% if @instrument.instrument.picture.attached? %>
     <% if @instruments.empty? %>
       <p class="no-instruments-message">No instruments found for "<%= params[:query] %>".</p>
-    <% else %>
-      <% @instruments.each do |instrument| %>
+      <% else %>
+      
+    <% @instruments.each do |instrument| %>
+      <% if instrument.picture.attached? %>
+
         <div class="s-card">
           <%# IMG %>
           <div class="s-card-image" style="background-image: url(<%= cl_image_path(instrument.picture.key, crop: :fill) %>);">
@@ -76,6 +82,9 @@
             </p>
           </div>
         </div>
+
+
+        <% end %>
       <% end %>
     <% end %>
   </div>
