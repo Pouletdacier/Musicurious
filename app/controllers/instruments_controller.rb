@@ -19,7 +19,6 @@ class InstrumentsController < ApplicationController
     if params[:families].present?
       @instruments = @instruments.where(family: params[:families])
     end
-
   end
 
   def discovery

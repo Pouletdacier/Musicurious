@@ -1,1 +1,15 @@
-<%= image_tag "solid marker.png", height: 30, width: 30, alt: "Marker" %>
+<% if family == "Woodwinds" %>
+  <%= image_tag "marker_woodwind", height: 30, width: 30, alt: "Marker" %>
+<% end %>
+
+<% if family == "Strings" %>
+  <%= image_tag "marker_string", height: 30, width: 30, alt: "Marker" %>
+<% end %>
+
+<% if family == "Brass" %>
+  <%= image_tag "marker_brass", height: 30, width: 30, alt: "Marker" %>
+<% end %>
+
+<% if family == "Percussions"%>
+  <%= image_tag "marker_percussion", height: 30, width: 30, alt: "Marker" %>
+<% end %>
