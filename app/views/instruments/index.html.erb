@@ -22,7 +22,7 @@
                 data-action="change->filter#submitFormOnChange"
                 data-target="filter.favourite">
 
-              <label for="favourite"> ❤️ </label>
+              <label for="favourite"> <i class="fas fa-heart"></i> </label>
             </div>
           </div>
         </div>
@@ -44,7 +44,7 @@
         <div class="filter-category second-category">
           <h3>Family Instrument</h3>
           <div class="filter-options d-flex">
-            <% ["String", "Percussion", "Woodwind", "Brass"].each do |family| %>
+            <% ["Strings", "Percussions", "Woodwinds", "Brass"].each do |family| %>
               <div class="custo">
                 <input id="instru-<%= family %>" class= tag-selector type="checkbox" name="families[]" value="<%= family %>" <%= 'checked' if params[:families]&.include?(family) %>>
                 <label for="instru-<%= family %>"><%= family %></label>
@@ -64,7 +64,7 @@
     <% if @instruments.empty? %>
       <p class="no-instruments-message">No instruments found for "<%= params[:query] %>".</p>
       <% else %>
-      
+
     <% @instruments.each do |instrument| %>
       <% if instrument.picture.attached? %>
 

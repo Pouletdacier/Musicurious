@@ -33,9 +33,14 @@ class InstrumentsController < ApplicationController
     @instruments = Instrument.all.except(picture: nil).shuffle
   end
 
+  # def show
+  #   @instrument = Instrument.find(params[:id])
+  #   @random_instruments = Instrument.order('RANDOM()').limit(2)
+  # end
+
   def show
     @instrument = Instrument.find(params[:id])
-    @random_instruments = Instrument.order('RANDOM()').limit(2)
+    @random_instruments = Instrument.joins(:picture_attachment).order('RANDOM()').limit(2)
   end
 
   def search
