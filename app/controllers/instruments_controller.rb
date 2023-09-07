@@ -49,7 +49,10 @@ class InstrumentsController < ApplicationController
   end
 
   def search
-    @instruments = Instrument.search(params[:query])
+    # @instruments = Instrument.search(params[:query])
+    # Use custom search to combine Algolia and filtering by attached picture
+    @instruments = Instrument.custom_search(params[:query])
+    
     render 'index' # ou la vue que vous souhaitez montrer
   end
 

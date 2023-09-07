@@ -70,10 +70,14 @@
       <% @instruments.each do |instrument| %>
         <div class="s-card">
           <%# IMG %>
+
+          <% if instrument.picture.attached? %>
           <div class="s-card-image" style="background-image: url(<%= cl_image_path(instrument.picture.key, crop: :fill) %>);">
             <div class="geographical-region"><%= instrument.geographical_region %></div>
             <%= link_to "About", instrument_path(instrument), class: "m-btn-primary" %>
           </div>
+          <% end %>
+          
           <%# INFOS %>
           <div class="s-card-body">
             <div class="">

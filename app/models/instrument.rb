@@ -29,5 +29,18 @@ class Instrument < ApplicationRecord
   #   end
   # end
 
+  def self.custom_search(query)
+    # Get instrument results from Algolia
+    instruments_from_algolia = self.search(query, hitsPerPage: 100) # Adjust this number accordingly
+
+    # Extract IDs from the search results
+    instrument_ids = instruments_from_algolia.map(&:id)
+
+    # Query the database to get instruments with pictures using the IDs
+    instruments_with_pictures = self.includes(:picture_blob).where(id: instrument_ids).where.not(picture_blob: { key: nil })
+
+    instruments_with_pictures
+  end
+
 
 end
