@@ -23,7 +23,7 @@ class InstrumentsController < ApplicationController
   end
 
   def discovery
-    @instruments = Instrument.all
+    @instruments = Instrument.all.shuffle
   end
 
   def show
