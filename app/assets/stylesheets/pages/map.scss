@@ -10,7 +10,7 @@
 .map-pop-up {
   width: 140px;
   max-height: 300px;
-  margin-top: 10px;
+  margin-top: -5px;
   border-radius: 15px;
   border: none;
   display: flex;
@@ -32,6 +32,7 @@
   align-items: center;
   position:relative;
   padding: 3px;
+  background-color: #C5CDCC;
   // background-size: contain;
   // background-position: center;
   // background-repeat: no-repeat;
@@ -54,6 +55,8 @@
   }
 }
 
+.info-popup{
+}
 
 
 // Le coin de la HAINE!!!!!
