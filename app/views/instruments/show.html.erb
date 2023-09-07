@@ -84,11 +84,17 @@
       <p class="suggestions_title">Suggested instruments</p>
 
       <div class="s-card-suggest-container">
+
+
         <% @random_instruments.each do |instrument| %>
           <div class="s-card s-card-reco">
-            <%# IMG %>
+
+            <%# Verif si instrument attached %>
+          <% if instrument.picture.attached? %>
+
             <div class="s-card-image" style="background-image: url(<%= cl_image_path(instrument.picture.key, crop: :fill) %>);">
               <div class="geographical-region"><%= instrument.geographical_region %></div>
+
               <%= link_to "About", instrument_path(instrument), class: "m-btn-primary" %>
             </div>
             <%# INFOS %>
@@ -98,12 +104,14 @@
                   <h4><strong><%= instrument.name %></strong></h4>
                   <br>
                 </div>
+
                 <p class="s-card-text">
                   <em><%= instrument.family %></em> <br>
                 </p>
               </div>
             </div>
-          </div>
+          <% end %>
+
         <% end %>
       </div>
     </div>
